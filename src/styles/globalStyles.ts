@@ -14,6 +14,7 @@ export default createGlobalStyle`
     color: ${(props: { theme: { colors: { text: any } } }) =>
       props.theme.colors.text};
     font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
     scroll-behavior: smooth;
     overflow-x: hidden;   
   }

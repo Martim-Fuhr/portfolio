@@ -3,7 +3,8 @@ import { NextPage } from 'next'
 import styled from 'styled-components'
 // import TypeWrite from '../components/TypeWrite'
 import Head from 'next/head'
-import { About } from '../components/About'
+import { CoverPage } from '../components/CoverPage'
+import { About } from '@/components/About'
 // import { Experiences } from '../components/experience'
 // import { Skills } from '../components/Skills'
 // import { Contact } from '../components/Contact'
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
         <title>Martim Führ | Portifolio</title>
       </Head>
       <Container>
+        <CoverPage />
         <About />
         {/* <TypeWrite />
         <Image src="/svg.svg" alt="" width={500} height={50} />
