@@ -10,7 +10,7 @@ export function CoverPage() {
       <ImageSection>
         <Image
           src={IMAGES.PROFILE}
-          loading="lazy"
+          priority={true}
           width={400}
           height={400}
           alt="foto de perfil Martim Fuhr"

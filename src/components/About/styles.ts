@@ -8,30 +8,31 @@ export const Profile = styled.div`
   padding: 0 8%;
 
   h2 {
-    align-self: flex-start;
-    border-bottom: 2px solid rgb(115, 115, 230);
+    font-family: 'IBM Plex Mono', monospace;
     font-size: 48px;
     font-weight: 800;
-    align-items: start;
-    width: 30%;
-  }
-`
+    text-align: right;
+    position: relative;
+    width: 100%;
 
-export const ImageSection = styled.div`
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
+    &::after {
+      background-color: rgb(115, 115, 230);
+      content: '';
+      display: flex;
+      height: 2px;
+      margin: -10px 0 10px 0;
+      min-width: 200px;
+      right: 0;
+      position: absolute;
+      width: 50%;
+    }
   }
 `
 
 export const TextParagraph = styled.p`
   font-size: 16px;
+  text-align: justify;
   letter-spacing: 1px;
-  max-width: 85%;
   width: 100%;
 
   @media screen and (min-width: 768px) {

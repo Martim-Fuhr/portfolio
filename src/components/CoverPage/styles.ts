@@ -23,7 +23,8 @@ export const ImageSection = styled.div`
 export const TextParagraph = styled.p`
   font-size: 16px;
   letter-spacing: 1px;
-  max-width: 85%;
+  text-align: justify;
+  /* max-width: 85%; */
   padding-top: 50px;
   width: 100%;
 

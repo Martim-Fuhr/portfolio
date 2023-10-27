@@ -12,6 +12,7 @@ export const HeaderSection = styled.header`
   z-index: 2;
 
   .switchClass {
+    display: none !important;
     position: absolute !important;
     right: 10px;
   }

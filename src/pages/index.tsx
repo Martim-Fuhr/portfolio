@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Head from 'next/head'
 import { CoverPage } from '../components/CoverPage'
 import { About } from '@/components/About'
-// import { Experiences } from '../components/experience'
+import { Experiences } from '@/components/Experience'
 // import { Skills } from '../components/Skills'
 // import { Contact } from '../components/Contact'
 // import Image from 'next/image'
@@ -16,7 +16,7 @@ const Container = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 1250px;
+  max-width: 1520px;
   overflow-x: hidden;
 `
 
@@ -29,6 +29,7 @@ const Home: NextPage = () => {
       <Container>
         <CoverPage />
         <About />
+        <Experiences />
         {/* <TypeWrite />
         <Image src="/svg.svg" alt="" width={500} height={50} />
         <About />
