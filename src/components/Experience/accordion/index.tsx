@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { ReactNode, useState } from 'react'
 import AccordionStyle from './styled'
 
 interface AccordionProps {
   title: string
-  children: string
+  children: ReactNode
 }
 
 export default function Accordion({ title, children }: AccordionProps) {
@@ -17,9 +17,9 @@ export default function Accordion({ title, children }: AccordionProps) {
       >
         <h3 className="accordion-name-title">{title}</h3>
       </button>
-      <div className={`accordion-content ${isOpen ? 'show' : ''}`}>
-        <p>{children}</p>
-      </div>
+      <ul className={`accordion-content ${isOpen ? 'show' : ''}`}>
+        {children}
+      </ul>
     </AccordionStyle>
   )
 }

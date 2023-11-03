@@ -59,18 +59,15 @@ export const Profile = styled.div`
     }
 
     &__company {
-      align-self: normal;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 26px;
+      padding: 4px 0 4px 8px;
+      /* align-self: normal;
       display: flex;
       flex-wrap: wrap;
-      flex-direction: row;
-      padding: 4px 0 4px 8px;
+      flex-direction: row; */
       /* justify-content: space-evenly; */
-
-      &--name {
-        text-transform: uppercase;
-        font-weight: 600;
-        font-size: 22px;
-      }
     }
 
     &::after {
@@ -80,6 +77,40 @@ export const Profile = styled.div`
       padding: 15px;
       position: absolute;
       top: 8px;
+    }
+  }
+`
+
+export const Descriptions = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .accordions {
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding-bottom: 10px;
+      position: relative;
+
+      &::before {
+        content: '';
+        background-color: rgb(255, 165, 0);
+        border-radius: 50%;
+        height: 8px;
+        margin-right: 10px;
+        width: 8px;
+        min-width: 8px;
+
+        @media screen and (max-width: 400px) {
+          height: 5px;
+          margin-right: 8px;
+          width: 5px;
+          min-width: 5px;
+        }
+      }
     }
   }
 `

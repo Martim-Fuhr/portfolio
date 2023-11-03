@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../../styles/themes/dark'
+import theme from '../../../styles/themes/dark'
 
 const AccordionStyle = styled.div`
   width: 100%;
@@ -14,11 +14,15 @@ const AccordionStyle = styled.div`
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
     text-transform: initial;
     text-align: start;
     padding: 0 20px;
     width: 100%;
+
+    &.open {
+      box-shadow: none;
+      border-radius: 5px 5px 0 0;
+    }
 
     @media screen and (min-width: 768px) {
       font-size: ${theme.fontSizes.largePlus};
@@ -56,9 +60,9 @@ const AccordionStyle = styled.div`
   }
 
   .accordion-content {
-    color: ${theme.colors.blackLight};
-    background-color: ${theme.colors.whiteAccordion};
-    border-radius: 5px;
+    background-color: ${theme.colors.blackLight};
+    color: ${theme.colors.whiteAccordion};
+    border-radius: 0 0 5px 5px;
     max-height: 0;
     overflow: hidden;
     transition: 0.2s linear;
@@ -71,7 +75,7 @@ const AccordionStyle = styled.div`
     }
 
     &.show {
-      max-height: 250px;
+      max-height: 1000px;
       overflow: hidden;
       margin-bottom: 10px;
       transition: 0.2s linear;
