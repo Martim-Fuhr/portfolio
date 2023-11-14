@@ -3,12 +3,10 @@ import { NextPage } from 'next'
 import styled from 'styled-components'
 // import TypeWrite from '../components/TypeWrite'
 import Head from 'next/head'
-import { CoverPage } from '../components/CoverPage'
-import { About } from '@/components/About'
-import { Experiences } from '@/components/Experience'
-// import { Skills } from '../components/Skills'
-// import { Contact } from '../components/Contact'
-// import Image from 'next/image'
+import { CoverPage } from '@/components/mid-site/CoverPage'
+import { About } from '@/components/mid-site/About'
+import { Experiences } from '@/components/mid-site/Experience'
+import { Skills } from '@/components/mid-site/Skills'
 
 const Container = styled.div`
   align-items: center;
@@ -30,15 +28,7 @@ const Home: NextPage = () => {
         <CoverPage />
         <About />
         <Experiences />
-        {/* <TypeWrite />
-        <Image src="/svg.svg" alt="" width={500} height={50} />
-        <About />
-        <Image src="/svg.svg" alt="" width={500} height={50} />
-        <Experiences />
-        <Image src="/svg.svg" alt="" width={500} height={50} />
         <Skills />
-        <Image src="/svg.svg" alt="" width={500} height={50} />
-        <Contact />  */}
       </Container>
     </>
   )

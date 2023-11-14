@@ -9,6 +9,7 @@ import light from '@/styles/themes/light'
 import dark from '@/styles/themes/dark'
 
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = usePersistedState('theme', light)
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStyle />
       <Header toggleTheme={toggleTheme} />
       <Component {...pageProps} />
+      <Footer />
     </ThemeProvider>
   )
 }

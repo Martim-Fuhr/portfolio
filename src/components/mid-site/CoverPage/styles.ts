@@ -20,7 +20,7 @@ export const ImageSection = styled.div`
   }
 `
 
-export const TextParagraph = styled.p`
+export const TextParagraph = styled.span`
   font-size: 16px;
   letter-spacing: 1px;
   text-align: justify;

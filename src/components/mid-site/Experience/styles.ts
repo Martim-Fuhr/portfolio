@@ -31,6 +31,7 @@ export const Profile = styled.div`
   }
 
   .exps {
+    color: #fff;
     font-size: 16px;
     letter-spacing: 1px;
     padding: 15px 0 40px;
@@ -38,14 +39,7 @@ export const Profile = styled.div`
     width: 100%;
 
     @media screen and (min-width: 768px) {
-      color: #fff;
-      padding: 10px 2px;
-    }
-
-    @media screen and (min-width: 1024px) {
-      color: #fff;
-      font-size: 25px;
-      padding: 10px 2px;
+      font-size: 23px;
     }
 
     &__date {
@@ -71,7 +65,7 @@ export const Profile = styled.div`
     }
 
     &::after {
-      content: '';
+      content: url('');
       border-top: 2px solid #fff;
       border-left: 2px solid #fff;
       padding: 15px;
@@ -111,6 +105,9 @@ export const Descriptions = styled.section`
           min-width: 5px;
         }
       }
+    }
+    span {
+      min-width: 80px;
     }
   }
 `

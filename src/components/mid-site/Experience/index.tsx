@@ -28,19 +28,28 @@ export function Experiences() {
                 <p className="flex text-xl uppercase p-3 justify-center w-full text-center">
                   main technologies used here
                 </p>
-                <span className="flex-1 flex flex-row justify-evenly">
-                  <span className="flex flex-col text-sm text-center">
-                    <FaReact size={100} />
+                <span className="flex-1 flex flex-row justify-evenly flex-wrap w-full">
+                  <span className="flex flex-col text-sm text-center w-4/12">
+                    <FaReact
+                      size={100}
+                      className="w-full flex justify-center"
+                    />
                     <p>ReactJs</p>
                   </span>
 
-                  <span className="flex flex-col text-sm text-center">
-                    <BiLogoJavascript size={100} />
+                  <span className="flex flex-col text-sm text-center w-4/12">
+                    <BiLogoJavascript
+                      size={100}
+                      className="w-full flex justify-center"
+                    />
                     <p>JavaScript</p>
                   </span>
 
-                  <span className="flex flex-col text-sm text-center">
-                    <BiLogoSass size={100} />
+                  <span className="flex flex-col text-sm text-center w-4/12">
+                    <BiLogoSass
+                      size={100}
+                      className="w-full flex justify-center"
+                    />
                     <p>SASS</p>
                   </span>
                 </span>
@@ -74,19 +83,28 @@ export function Experiences() {
                 <p className="flex text-xl uppercase p-3 justify-center w-full text-center">
                   main technologies used here
                 </p>
-                <span className="flex-1 flex flex-row justify-evenly">
-                  <span className="flex flex-col text-sm text-center">
-                    <FaReact size={100} />
+                <span className="flex-1 flex flex-row justify-evenly flex-wrap w-full">
+                  <span className="flex flex-col text-sm text-center w-4/12">
+                    <FaReact
+                      size={100}
+                      className="w-full flex justify-center"
+                    />
                     <p>ReactJs</p>
                   </span>
 
-                  <span className="flex flex-col text-sm text-center">
-                    <BiLogoTypescript size={100} />
+                  <span className="flex flex-col text-sm text-center w-4/12">
+                    <BiLogoTypescript
+                      size={100}
+                      className="w-full flex justify-center"
+                    />
                     <p>TypeScript</p>
                   </span>
 
-                  <span className="flex flex-col text-sm text-center">
-                    <TbBrandNextjs size={100} />
+                  <span className="flex flex-col text-sm text-center w-4/12">
+                    <TbBrandNextjs
+                      size={100}
+                      className="w-full flex justify-center"
+                    />
                     <p>NextJs</p>
                   </span>
                 </span>

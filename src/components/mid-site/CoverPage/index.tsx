@@ -2,6 +2,7 @@ import React from 'react'
 import { IMAGES } from '@/images'
 import Image from 'next/image'
 import { FaHandSpock } from 'react-icons/fa'
+import { Contact } from '@/components/mid-site/Contact'
 import { Profile, ImageSection, TextParagraph } from './styles'
 
 export function CoverPage() {
@@ -22,6 +23,7 @@ export function CoverPage() {
           Hello! I{"'"}m Martim Führ, a 25-year-old with 2 years of experience
           as a Frontend Developer. To learn more about me and my journey, you
           can click here!
+          <Contact />
         </TextParagraph>
       </ImageSection>
     </Profile>

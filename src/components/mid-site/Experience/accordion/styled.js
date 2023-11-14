@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../styles/themes/dark'
+import theme from '../../../../styles/themes/dark'
 
 const AccordionStyle = styled.div`
   width: 100%;
@@ -75,7 +75,7 @@ const AccordionStyle = styled.div`
     }
 
     &.show {
-      max-height: 1000px;
+      max-height: fit-content;
       overflow: hidden;
       margin-bottom: 10px;
       transition: 0.2s linear;

@@ -6,6 +6,7 @@ export const Profile = styled.div`
   flex-direction: column;
   margin: 25px 0 25px 0;
   padding: 0 8%;
+  width: 100%;
 
   h2 {
     font-family: 'IBM Plex Mono', monospace;
@@ -30,18 +31,13 @@ export const Profile = styled.div`
 `
 
 export const TextParagraph = styled.p`
+  color: #fff;
   font-size: 16px;
-  text-align: justify;
+  text-align: right;
   letter-spacing: 1px;
   width: 100%;
 
   @media screen and (min-width: 768px) {
-    color: #fff;
-    padding: 10px 2px;
-  }
-
-  @media screen and (min-width: 1024px) {
-    color: #fff;
     font-size: 25px;
     padding: 10px 2px;
   }
