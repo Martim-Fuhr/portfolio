@@ -5,7 +5,7 @@ import { Profile, TextParagraph } from './styles'
 export function About() {
   return (
     <Profile>
-      <h2>About</h2>
+      <h2 id="about">About</h2>
       <TextParagraph>
         My name is Martim Fuhr, I&apos;m 25 years old, and I live in Brazil, in
         the in the state of Rio Grande do Sul. I&apos;ve been working as a

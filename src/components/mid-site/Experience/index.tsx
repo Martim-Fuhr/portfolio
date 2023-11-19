@@ -5,13 +5,14 @@ import { FaReact } from 'react-icons/fa'
 import { BiLogoJavascript, BiLogoSass, BiLogoTypescript } from 'react-icons/bi'
 import { TbBrandNextjs } from 'react-icons/tb'
 import Accordion from './accordion'
+import SeeMore from './seemore'
 
 export function Experiences() {
   // const { isMobile } = useBreakpoints()
 
   return (
     <Profile>
-      <h2>Experience</h2>
+      <h2 id="experience">Experience</h2>
       <div className="exps">
         <div className="exps__date">06/2021 - 01/2022</div>
         <div className="exps__title">Frontend Developer Trainee</div>
@@ -55,6 +56,12 @@ export function Experiences() {
                 </span>
               </div>
             </Accordion>
+            <SeeMore title="Principais Entregas">
+              <li>
+                Criação da v1 do ZZPay, a ferramenta de cashback da Arezzo&Co
+              </li>
+              <li>Refatoração do Menu Mobile e Web do ZZMall</li>
+            </SeeMore>
           </div>
         </Descriptions>
       </div>
@@ -110,6 +117,20 @@ export function Experiences() {
                 </span>
               </div>
             </Accordion>
+            <SeeMore title="Principais Entregas">
+              <li>
+                Criação do Hover Com Video nas Páginas de Categorias nos sites
+                da companhia
+              </li>
+              <li>
+                Criação do Hover com Imagens nas Páginas de Categoria nos sites
+                da companhia
+              </li>
+              <li>
+                Criação e personalização do Gerador de Blog da Companhia para
+                sites de renome como Vans e Schutz
+              </li>
+            </SeeMore>
           </div>
         </Descriptions>
       </div>

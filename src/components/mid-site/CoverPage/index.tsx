@@ -7,7 +7,7 @@ import { Profile, ImageSection, TextParagraph } from './styles'
 
 export function CoverPage() {
   return (
-    <Profile>
+    <Profile id="home">
       <ImageSection>
         <Image
           src={IMAGES.PROFILE}

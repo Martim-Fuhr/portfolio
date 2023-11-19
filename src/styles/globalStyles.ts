@@ -6,6 +6,8 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
     text-rendering: optimizeLegibility;
+    scroll-padding: 80px;
+    scroll-behavior: smooth;
   }
   
   body {
@@ -20,12 +22,12 @@ export default createGlobalStyle`
   }
 
   body::-webkit-scrollbar {
-    width: 7px;
+    width: 5px;
     border-radius: 5px;
   }
  
   body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
   }
   
   body::-webkit-scrollbar-thumb {

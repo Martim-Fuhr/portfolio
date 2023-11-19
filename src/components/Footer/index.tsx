@@ -10,7 +10,9 @@ export function Footer() {
   return (
     <Container className="flex align-bottom justify-center flex-col">
       <Contact />
-      <p className="text-sm text-center">© 2023, Martim Fuhr</p>
+      <p id="contact" className="text-sm text-center">
+        © 2023, Martim Fuhr
+      </p>
     </Container>
   )
 }

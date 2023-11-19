@@ -5,8 +5,8 @@ export const Profile = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 25px 0 25px 0;
-  padding: 0 8%;
+  margin: 0 0 25px 0;
+  padding: 105px 8% 0 8%;
   min-height: 90vh;
 `
 

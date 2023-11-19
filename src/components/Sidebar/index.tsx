@@ -1,7 +1,8 @@
 import React from 'react'
-import { Container, LinkList, InfoList, SpanOverlay } from './styles'
+import { Container, InfoList, SpanOverlay } from './styles'
 
 import { FaArrowLeft } from 'react-icons/fa'
+import Link from 'next/link'
 
 export function Sidebar({ active }: any) {
   const closeSidebar = () => {
@@ -10,19 +11,32 @@ export function Sidebar({ active }: any) {
 
   return (
     <>
-      <Container sidebar={active}>
+      <Container sidebar={active} onClick={closeSidebar}>
         <FaArrowLeft onClick={closeSidebar} />
         <InfoList>
-          <LinkList>About</LinkList>
+          <Link href="#home" scroll={false}>
+            Home
+          </Link>
         </InfoList>
         <InfoList>
-          <LinkList>Skills</LinkList>
+          <Link href="#about" scroll={false}>
+            About
+          </Link>
         </InfoList>
         <InfoList>
-          <LinkList>Experience</LinkList>
+          <Link href="#experience" scroll={false}>
+            Experience
+          </Link>
         </InfoList>
         <InfoList>
-          <LinkList>Contact</LinkList>
+          <Link href="#skills'" scroll={false}>
+            Skills
+          </Link>
+        </InfoList>
+        <InfoList>
+          <Link href="#contact" scroll={false}>
+            Contact
+          </Link>
         </InfoList>
       </Container>
       <SpanOverlay onClick={closeSidebar} />

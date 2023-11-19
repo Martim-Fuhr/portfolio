@@ -65,12 +65,13 @@ export const Profile = styled.div`
     }
 
     &::after {
-      content: url('');
-      border-top: 2px solid #fff;
-      border-left: 2px solid #fff;
-      padding: 15px;
+      /* border: 1px solid; */
+      content: '';
+      padding: 2px;
       position: absolute;
-      top: 8px;
+      top: 50%;
+      width: 40px;
+      height: 40px;
     }
   }
 `

@@ -28,17 +28,68 @@ export const Profile = styled.div`
       width: 50%;
     }
   }
+
+  svg {
+    margin: 0 auto;
+    transition: 0.2s linear;
+
+    &:hover {
+      transform: scale(1.5);
+      transition: 0.2s linear;
+
+      &.react {
+        fill: #61dafb;
+      }
+
+      &.js {
+        fill: #f7e018;
+      }
+
+      &.ts {
+        fill: #007acd;
+      }
+
+      &.next path {
+        color: #000;
+      }
+
+      &.tw {
+        fill: #38bdf8;
+      }
+
+      &.stc {
+        fill: #f7c9ff;
+      }
+
+      &.git {
+        fill: #f05033;
+      }
+
+      &.node path {
+        color: #90c53f;
+      }
+
+      &.go {
+        fill: #b366f6;
+      }
+
+      &.gtm {
+        fill: #4fc4f7;
+      }
+    }
+  }
 `
 
 export const TextParagraph = styled.p`
   color: #fff;
   font-size: 16px;
-  text-align: right;
+  text-align: center;
   letter-spacing: 1px;
+  padding: 10px 2px;
   width: 100%;
 
   @media screen and (min-width: 768px) {
     font-size: 25px;
-    padding: 10px 2px;
+    padding: 20px 2px;
   }
 `

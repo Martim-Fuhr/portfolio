@@ -16,7 +16,7 @@ const SOCIAL_MEDIA = {
 
 export function Contact() {
   return (
-    <SocialMedias>
+    <SocialMedias id="skills">
       <div className="flex flex-wrap justify-between max-w-md w-full">
         <Link href={SOCIAL_MEDIA.LINKEDIN} className="linkedin" target="_blank">
           <FaLinkedinIn size={38} />

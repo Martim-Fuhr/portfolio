@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Sidebar from '../Sidebar'
 import Switch from 'react-switch'
 import { useBreakpoints } from '../../hooks/use-breakpoints'
@@ -21,9 +21,34 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
   const { isMobile } = useBreakpoints()
   const { colors, title } = useContext(ThemeContext)
 
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true)
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset
+
+      setIsHeaderVisible(
+        prevScrollPos > currentScrollPos || currentScrollPos < 200,
+      )
+      setPrevScrollPos(currentScrollPos)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [prevScrollPos])
+
   const showSideBar = () => setSidebar(!sidebar)
   return (
-    <HeaderSection>
+    <HeaderSection
+      style={{
+        transform: isHeaderVisible ? 'translateY(0)' : 'translateY(-100%)',
+        transition: 'transform 0.3s ease-in-out',
+      }}
+    >
       <HamburgerIcon
         className={sidebar ? 'icon iconActive' : 'icon'}
         onClick={showSideBar}
