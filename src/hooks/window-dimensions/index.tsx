@@ -1,3 +1,4 @@
+import { Props } from 'next/script'
 import { createContext, FC, useContext, useEffect, useState } from 'react'
 
 // import { browserUtils } from '@/utils'
@@ -16,7 +17,7 @@ const initialState = {
 const WindowDimensionsContext =
   createContext<WindowDimensionsContextState>(initialState)
 
-const WindowDimensionsProvider: FC = ({ children }) => {
+const WindowDimensionsProvider: React.FC<Props> = ({ children }) => {
   const [isLoading, setIsLoading] = useState<boolean>(true)
   const [windowSize, setWindowSize] = useState<{
     width: number
