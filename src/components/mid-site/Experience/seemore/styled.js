@@ -2,15 +2,14 @@ import styled from 'styled-components'
 import theme from '../../../../styles/themes/dark'
 
 const AccordionStyle = styled.div`
-  padding: 10px 0 5px 0;
+  padding: 30px 0 5px 0;
   width: 100%;
 
   .accordion-title {
     align-items: center;
+    background-color: rgba(30 30 30 / 0.3);
     border: 0;
     border-radius: 5px;
-    box-shadow: -5px -5px 15px -15px rgba(255, 255, 255, 0.7) inset;
-    background-color: ${theme.colors.blackLight};
     color: ${theme.colors.white};
     cursor: pointer;
     display: flex;
@@ -20,8 +19,11 @@ const AccordionStyle = styled.div`
     padding: 0 20px;
     width: 100%;
 
+    &:hover {
+      background-color: rgba(30 30 30 / 0.4);
+    }
+
     &.open {
-      box-shadow: none;
       border-radius: 5px 5px 0 0;
     }
 
@@ -30,13 +32,12 @@ const AccordionStyle = styled.div`
     }
 
     &:after {
-      content: '>>';
+      content: '↓';
       color: ${theme.colors.white};
       font-size: ${theme.fontSizes.semiLarge};
       font-weight: ${theme.fontWeights.normal};
       margin: 15px 0;
       transition: 0.3s linear;
-      transform: rotate(90deg);
       position: relative;
 
       @media screen and (min-width: 768px) {
@@ -44,26 +45,22 @@ const AccordionStyle = styled.div`
       }
     }
 
-    &.close:after {
-      transform: rotate(-90deg);
+    &.open:after {
+      transform: rotate(-180deg);
       transition: 0.2s linear;
     }
 
     .accordion-name-title {
       padding: 8px 0;
       letter-spacing: 1px;
-      font-size: ${theme.fontSizes.semiLarge};
-
-      @media screen and (min-width: 768px) {
-        font-size: ${theme.fontSizes.largePlus};
-      }
+      font-size: ${theme.fontSizes.medium2};
     }
   }
 
   .accordion-content {
-    background-color: ${theme.colors.blackLight};
-    color: ${theme.colors.whiteAccordion};
+    background-color: rgba(30 30 30 / 0.3);
     border-radius: 0 0 5px 5px;
+    color: ${theme.colors.whiteAccordion};
     max-height: 0;
     overflow: hidden;
     transition: 0.2s linear;
@@ -75,12 +72,16 @@ const AccordionStyle = styled.div`
       font-size: ${theme.fontSizes.medium};
     }
 
+    &:hover {
+      background-color: rgba(30 30 30 / 0.4);
+    }
+
     &.show {
       max-height: fit-content;
       overflow: hidden;
       margin-bottom: 10px;
       transition: 0.2s linear;
-      padding: 20px;
+      padding: 20px 20px 0 20px;
     }
   }
 `

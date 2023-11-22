@@ -29,13 +29,12 @@ const AccordionStyle = styled.div`
     }
 
     &:after {
-      content: '>>';
+      content: '↓';
       color: ${theme.colors.white};
       font-size: ${theme.fontSizes.semiLarge};
       font-weight: ${theme.fontWeights.normal};
       margin: 15px 0;
       transition: 0.3s linear;
-      transform: rotate(90deg);
       position: relative;
 
       @media screen and (min-width: 768px) {
@@ -43,8 +42,8 @@ const AccordionStyle = styled.div`
       }
     }
 
-    &.close:after {
-      transform: rotate(-90deg);
+    &.open:after {
+      transform: rotate(-180deg);
       transition: 0.2s linear;
     }
 

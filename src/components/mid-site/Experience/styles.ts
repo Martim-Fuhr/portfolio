@@ -34,7 +34,7 @@ export const Profile = styled.div`
     color: #fff;
     font-size: 16px;
     letter-spacing: 1px;
-    padding: 15px 0 40px;
+    margin: 15px 0 40px;
     position: relative;
     width: 100%;
 
@@ -55,27 +55,34 @@ export const Profile = styled.div`
     &__company {
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 26px;
+      font-size: 23px;
       padding: 4px 0 4px 8px;
-      /* align-self: normal;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row; */
-      /* justify-content: space-evenly; */
     }
 
-    &::after {
-      /* border: 1px solid; */
+    &::before {
+      transform: translateX(-15px);
       content: '';
-      padding: 2px;
       position: absolute;
-      top: 50%;
-      width: 40px;
-      height: 40px;
+      width: 2px;
+      height: 100%;
+      top: 5%;
+      bottom: 5%;
+      transition: background-color 0.5s ease;
+      background: linear-gradient(90deg, #1e1e1e, #333, #1e1e1e);
+      background-size: 200% 100%;
+      animation: BorderAnimation 2s linear infinite;
+    }
+
+    @keyframes BorderAnimation {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 100% 0%;
+      }
     }
   }
 `
-
 export const Descriptions = styled.section`
   display: flex;
   flex-direction: column;
