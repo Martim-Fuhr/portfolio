@@ -7,7 +7,7 @@ export const Profile = styled.div`
   flex-direction: column;
   margin: 0 0 25px 0;
   padding: 105px 8% 0 8%;
-  min-height: 90vh;
+  min-height: 95vh;
 `
 
 export const ImageSection = styled.div`
