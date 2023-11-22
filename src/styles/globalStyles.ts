@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import theme from './../styles/themes/dark'
 
 export default createGlobalStyle`
   * {
@@ -11,10 +12,8 @@ export default createGlobalStyle`
   }
   
   body {
-    background-color: ${(props: { theme: { colors: { background: any } } }) =>
-      props.theme.colors.background};
-    color: ${(props: { theme: { colors: { text: any } } }) =>
-      props.theme.colors.text};
+    background-color: ${theme.colors.background};
+    color: ${theme.colors.text};
     font-family: 'Roboto', sans-serif;
     min-height: 100vh;
     scroll-behavior: smooth;

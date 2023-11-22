@@ -10,7 +10,7 @@ import {
   SpanName,
   SpanDesk,
   HamburgerIcon,
-} from './style'
+} from './styles'
 
 interface Props {
   toggleTheme(): void

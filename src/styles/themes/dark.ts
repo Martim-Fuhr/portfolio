@@ -7,11 +7,13 @@ export default {
     secondary: '#0D3030',
 
     background: '#333',
+    backgroundSecondary: '#222',
     text: '#FCFFFC',
 
     black: '#000',
     blackLight: '#1E1E1E',
     hoverGray: '#EBEBEB',
+    whiteOff: '#FFFFCA',
     blackLight2: '#2D2D2D',
     pinkLight: '#E7ACB4',
     messageAlert: '#D61A1A',

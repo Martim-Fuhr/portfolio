@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import theme from '../../../styles/themes/dark'
 
 export const Profile = styled.div`
   align-items: center;
@@ -21,12 +22,16 @@ export const ImageSection = styled.div`
 `
 
 export const TextParagraph = styled.span`
+  color: ${theme.colors.text};
   font-size: 16px;
   letter-spacing: 1px;
   text-align: justify;
-  /* max-width: 85%; */
   padding-top: 50px;
   width: 100%;
+
+  a {
+    color: ${theme.colors.whiteOff};
+  }
 
   @media screen and (min-width: 768px) {
     margin-left: 90px;

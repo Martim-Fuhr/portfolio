@@ -1,11 +1,12 @@
 import styled from 'styled-components'
+import theme from './../../styles/themes/dark'
 
 export const Container = styled.ul`
   animation: showSidebar 0.6s;
   align-items: center;
-  background-color: #222;
-  box-shadow: 0 0 30px -20px;
-  color: #fff;
+  background-color: ${theme.colors.backgroundSecondary};
+  box-shadow: 0 0 30px -20px ${theme.colors.black};
+  color: ${theme.colors.whiteAccordion};
   display: flex;
   flex-direction: column;
   left: ${(props: { sidebar: any }) => (props.sidebar ? '0' : '-100')};
@@ -23,7 +24,7 @@ export const Container = styled.ul`
 
   > svg {
     cursor: pointer;
-    color: #fff;
+    color: ${theme.colors.whiteAccordion};
     height: 28px;
     padding: 15px 15px 15px 10px;
     position: fixed;
@@ -79,6 +80,7 @@ export const InfoList = styled.li`
   }
 
   a {
+    color: ${theme.colors.whiteAccordion};
     padding: 25px 45px;
 
     &:hover {
@@ -89,7 +91,7 @@ export const InfoList = styled.li`
 
 export const SpanOverlay = styled.span`
   animation: 0.5s;
-  background-color: #222;
+  background-color: ${theme.colors.backgroundSecondary};
   flex-direction: column;
   display: ${(p: any) => (p.sidebar ? 'none' : 'flex')};
   height: 100vh;

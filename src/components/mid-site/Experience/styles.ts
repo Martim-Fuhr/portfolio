@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import theme from '../../../styles/themes/dark'
 
 export const Profile = styled.div`
   align-items: center;
@@ -9,6 +10,7 @@ export const Profile = styled.div`
   width: 100%;
 
   h2 {
+    color: ${theme.colors.text};
     font-family: 'IBM Plex Mono', monospace;
     align-self: flex-start;
     font-size: 38px;
@@ -31,7 +33,7 @@ export const Profile = styled.div`
   }
 
   .exps {
-    color: #fff;
+    color: ${theme.colors.text};
     font-size: 16px;
     letter-spacing: 1px;
     margin: 15px 0 40px;

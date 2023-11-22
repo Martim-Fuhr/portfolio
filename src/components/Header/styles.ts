@@ -1,9 +1,10 @@
 import styled from 'styled-components'
+import theme from './../../styles/themes/dark'
 
 export const HeaderSection = styled.header`
   align-items: center;
-  background-color: #222;
-  box-shadow: 0 0 20px 3px;
+  background-color: ${theme.colors.backgroundSecondary};
+  box-shadow: 0 0 20px 3px ${theme.colors.black};
   display: flex;
   flex-direction: row;
   height: 80px;
@@ -37,21 +38,21 @@ export const HamburgerIcon = styled.div`
 
     &:after {
       top: 0;
-      background: #fff;
+      background: ${theme.colors.whiteAccordion};
       transform: rotate(225deg);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     &:before {
       top: 0;
-      background: #fff;
+      background: ${theme.colors.whiteAccordion};
       transform: rotate(135deg);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
   }
 
   .hamburger {
-    background-color: #fff;
+    background-color: ${theme.colors.whiteAccordion};
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     height: 3px;
     top: 50%;
@@ -66,7 +67,7 @@ export const HamburgerIcon = styled.div`
     }
 
     &:before {
-      background: #fff;
+      background: ${theme.colors.whiteAccordion};
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       content: '';
       height: 3px;
@@ -81,7 +82,7 @@ export const HamburgerIcon = styled.div`
     }
 
     &:after {
-      background: #fff;
+      background: ${theme.colors.whiteAccordion};
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       content: '';
       height: 3px;
@@ -99,7 +100,7 @@ export const HamburgerIcon = styled.div`
 
 export const ProfileInfo = styled.div`
   align-items: center;
-  color: #fff;
+  color: ${theme.colors.whiteAccordion};
   display: flex;
   justify-content: center;
   line-height: 1.7em;
@@ -111,6 +112,7 @@ export const ProfileInfo = styled.div`
 `
 
 export const SpanName = styled.span`
+  color: ${theme.colors.whiteAccordion};
   font-family: 'IBM Plex Mono', monospace;
   font-size: 40px;
   display: flex;
@@ -127,6 +129,7 @@ export const SpanName = styled.span`
 `
 
 export const SpanDesk = styled.span`
+  color: ${theme.colors.whiteAccordion};
   font-family: 'IBM Plex Mono', monospace;
   font-size: 17px;
   text-align: end;

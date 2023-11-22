@@ -1,9 +1,14 @@
 import React from 'react'
 import Contact from '../mid-site/Contact'
 import styled from 'styled-components'
+import theme from '../../styles/themes/dark'
 
 const Container = styled.footer`
   padding: 0 8%;
+
+  #contact {
+    color: ${theme.colors.text};
+  }
 `
 
 export function Footer() {

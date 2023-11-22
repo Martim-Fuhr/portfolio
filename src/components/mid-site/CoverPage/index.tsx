@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { FaHandSpock } from 'react-icons/fa'
 import { Contact } from '@/components/mid-site/Contact'
 import { Profile, ImageSection, TextParagraph } from './styles'
+import Link from 'next/link'
 
 export function CoverPage() {
   return (
@@ -22,7 +23,10 @@ export function CoverPage() {
           <FaHandSpock className="inline-block mr-1.5" />
           Hello! I{"'"}m Martim Führ, a 25-year-old with 2 years of experience
           as a Frontend Developer. To learn more about me and my journey, you
-          can click here!
+          can{' '}
+          <Link href="#experience" scroll={false}>
+            click here!
+          </Link>
           <Contact />
         </TextParagraph>
       </ImageSection>

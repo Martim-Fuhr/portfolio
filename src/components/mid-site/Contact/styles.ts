@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import theme from '../../../styles/themes/dark'
 
 const SOCIAL_MEDIA_COLORS = {
   LINKEDIN: '#0E76A8',
@@ -18,6 +19,7 @@ export const SocialMedias = styled.div`
 
   a {
     svg {
+      color: ${theme.colors.text};
       transition: transform 0.2s;
     }
 

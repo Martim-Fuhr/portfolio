@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import theme from '../../../styles/themes/dark'
 
 export const Profile = styled.div`
   align-items: center;
@@ -9,6 +10,7 @@ export const Profile = styled.div`
   width: 100%;
 
   h2 {
+    color: ${theme.colors.text};
     font-family: 'IBM Plex Mono', monospace;
     font-size: 48px;
     font-weight: 800;
@@ -30,6 +32,7 @@ export const Profile = styled.div`
   }
 
   svg {
+    color: ${theme.colors.text};
     margin: 0 auto;
     transition: 0.2s linear;
 
@@ -81,7 +84,7 @@ export const Profile = styled.div`
 `
 
 export const TextParagraph = styled.p`
-  color: #fff;
+  color: ${theme.colors.text};
   font-size: 16px;
   text-align: center;
   letter-spacing: 1px;
