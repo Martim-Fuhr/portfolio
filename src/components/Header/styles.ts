@@ -1,9 +1,8 @@
 import styled from 'styled-components'
-import theme from './../../styles/themes/dark'
+import theme from '@/app/theme'
 
 export const HeaderSection = styled.header`
   align-items: center;
-  background-color: ${theme.colors.backgroundSecondary};
   box-shadow: 0 0 20px 3px ${theme.colors.black};
   display: flex;
   flex-direction: row;
@@ -12,12 +11,6 @@ export const HeaderSection = styled.header`
   width: 100%;
   position: fixed;
   z-index: 2;
-
-  .switchClass {
-    display: none !important;
-    position: absolute !important;
-    right: 10px;
-  }
 `
 
 export const HamburgerIcon = styled.div`

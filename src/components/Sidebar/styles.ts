@@ -1,15 +1,18 @@
 import styled from 'styled-components'
-import theme from './../../styles/themes/dark'
+import theme from '@/app/theme'
 
-export const Container = styled.ul`
+interface ContainerProps {
+  sidebar: boolean
+}
+
+export const Container = styled.ul<ContainerProps>`
   animation: showSidebar 0.6s;
   align-items: center;
-  background-color: ${theme.colors.backgroundSecondary};
   box-shadow: 0 0 30px -20px ${theme.colors.black};
   color: ${theme.colors.whiteAccordion};
   display: flex;
   flex-direction: column;
-  left: ${(props: { sidebar: any }) => (props.sidebar ? '0' : '-100')};
+  left: ${(props) => (props.sidebar ? '0' : '-100')};
   height: 100vh;
   position: fixed;
   top: 80px;
@@ -26,7 +29,7 @@ export const Container = styled.ul`
     cursor: pointer;
     color: ${theme.colors.whiteAccordion};
     height: 28px;
-    padding: 15px 15px 15px 10px;
+    margin: 7px;
     position: fixed;
     left: 183px;
     width: 28px;
@@ -89,11 +92,11 @@ export const InfoList = styled.li`
   }
 `
 
-export const SpanOverlay = styled.span`
+export const SpanOverlay = styled.span<ContainerProps>`
   animation: 0.5s;
   background-color: ${theme.colors.backgroundSecondary};
   flex-direction: column;
-  display: ${(p: any) => (p.sidebar ? 'none' : 'flex')};
+  display: ${(props) => (props.sidebar ? 'none' : 'flex')};
   height: 100vh;
   opacity: 90%;
   position: fixed;

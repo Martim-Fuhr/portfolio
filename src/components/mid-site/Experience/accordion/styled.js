@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../../styles/themes/dark'
+import theme from '../../../../app/theme'
 
 const AccordionStyle = styled.div`
   width: 100%;
@@ -16,7 +16,7 @@ const AccordionStyle = styled.div`
     justify-content: space-between;
     text-transform: initial;
     text-align: start;
-    padding: 0 20px;
+    padding: 0 10px;
     width: 100%;
 
     &.open {
@@ -29,11 +29,12 @@ const AccordionStyle = styled.div`
     }
 
     &:after {
-      content: '↓';
+      content: '';
       color: ${theme.colors.white};
       font-size: ${theme.fontSizes.semiLarge};
       font-weight: ${theme.fontWeights.normal};
       margin: 15px 0;
+      min-height: 30px;
       transition: 0.3s linear;
       position: relative;
 

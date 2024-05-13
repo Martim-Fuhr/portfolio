@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../styles/themes/dark'
+import theme from '../../../app/theme'
 
 export const Profile = styled.div`
   align-items: center;
@@ -78,6 +78,14 @@ export const Profile = styled.div`
 
       &.gtm {
         fill: #4fc4f7;
+      }
+
+      &.lrv {
+        fill: #ff2414;
+      }
+
+      &.php {
+        fill: #7377ad;
       }
     }
   }

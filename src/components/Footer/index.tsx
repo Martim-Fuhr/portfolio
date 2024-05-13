@@ -1,24 +1,13 @@
-import React from 'react'
 import Contact from '../mid-site/Contact'
-import styled from 'styled-components'
-import theme from '../../styles/themes/dark'
-
-const Container = styled.footer`
-  padding: 0 8%;
-
-  #contact {
-    color: ${theme.colors.text};
-  }
-`
 
 export function Footer() {
   return (
-    <Container className="flex align-bottom justify-center flex-col">
+    <footer className="flex align-bottom justify-center flex-col px-24">
       <Contact />
-      <p id="contact" className="text-sm text-center">
+      <p id="contact" className="text-sm text-center #e5e7eb">
         © 2023, Martim Fuhr
       </p>
-    </Container>
+    </footer>
   )
 }
 

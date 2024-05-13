@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react'
+'use client'
+
+import { useState, useEffect } from 'react'
 import Sidebar from '../Sidebar'
-import Switch from 'react-switch'
-import { useBreakpoints } from '../../hooks/use-breakpoints'
-import { ThemeContext } from 'styled-components'
 
 import {
   HeaderSection,
@@ -12,14 +11,8 @@ import {
   HamburgerIcon,
 } from './styles'
 
-interface Props {
-  toggleTheme(): void
-}
-
-const Header: React.FC<Props> = ({ toggleTheme }) => {
+export function Header() {
   const [sidebar, setSidebar] = useState(false)
-  const { isMobile } = useBreakpoints()
-  const { colors, title } = useContext(ThemeContext)
 
   const [isHeaderVisible, setIsHeaderVisible] = useState(true)
   const [prevScrollPos, setPrevScrollPos] = useState(0)
@@ -44,6 +37,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
   const showSideBar = () => setSidebar(!sidebar)
   return (
     <HeaderSection
+      className="bg-stone-900"
       style={{
         transform: isHeaderVisible ? 'translateY(0)' : 'translateY(-100%)',
         transition: 'transform 0.3s ease-in-out',
@@ -61,19 +55,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
           <SpanDesk>Web Developer</SpanDesk>
         </SpanName>
       </ProfileInfo>
-      <Switch
-        className={'switchClass'}
-        onChange={toggleTheme}
-        checked={title === 'dark'}
-        checkedIcon={false}
-        uncheckedIcon={false}
-        width={isMobile ? 35 : 40}
-        height={isMobile ? 15 : 15}
-        handleDiameter={25}
-        offColor={colors.secondary}
-        onColor={colors.primary}
-      />
-      {sidebar && <Sidebar active={setSidebar} />}
+      {sidebar && <Sidebar setActive={setSidebar} active={sidebar} />}
     </HeaderSection>
   )
 }

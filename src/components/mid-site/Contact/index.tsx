@@ -1,17 +1,17 @@
-import React from 'react'
+'use client'
 
 import Link from 'next/link'
 import { SocialMedias } from './styles'
 import { AiFillGithub } from 'react-icons/ai'
 import { FaLinkedinIn } from 'react-icons/fa'
-import { RiMailSendFill } from 'react-icons/ri'
+// import { RiMailSendFill } from 'react-icons/ri'
 import { BsInstagram } from 'react-icons/bs'
 
 const SOCIAL_MEDIA = {
   LINKEDIN: 'https://www.linkedin.com/in/martim-fuhr/',
   GITHUB: 'https://github.com/Martim-Fuhr',
   INSTAGRAM: 'https://www.instagram.com/martimfuhr/',
-  OUTLOOK: 'mailto:martimfuhr@hotmail.com',
+  // OUTLOOK: 'mailto:martimfuhr@hotmail.com',
 }
 
 export function Contact() {
@@ -34,9 +34,9 @@ export function Contact() {
           <BsInstagram size={38} />
         </Link>
 
-        <Link href={SOCIAL_MEDIA.OUTLOOK} className="outlook">
+        {/* <Link href={SOCIAL_MEDIA.OUTLOOK} className="outlook">
           <RiMailSendFill size={38} />
-        </Link>
+        </Link> */}
       </div>
     </SocialMedias>
   )

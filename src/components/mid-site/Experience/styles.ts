@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../styles/themes/dark'
+import theme from '../../../app/theme'
 
 export const Profile = styled.div`
   align-items: center;
@@ -33,7 +33,9 @@ export const Profile = styled.div`
   }
 
   .exps {
-    color: ${theme.colors.text};
+    background-color: rgba(10, 23, 55, 0.1);
+    backdrop-filter: blur(16px);
+    -webki-backdrop-filter: blur(16px);
     font-size: 16px;
     letter-spacing: 1px;
     margin: 15px 0 40px;
@@ -44,21 +46,37 @@ export const Profile = styled.div`
       font-size: 23px;
     }
 
-    &__date {
-      color: rgb(125, 125, 125);
-      padding: 4px 0 4px 8px;
-    }
-
     &__title {
+      color: white;
       font-weight: 600;
-      padding: 4px 0 4px 8px;
+      font-size: 22px;
+      padding: 4px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 22px;
+      }
     }
 
     &__company {
+      color: white;
       text-transform: uppercase;
       font-weight: 600;
-      font-size: 23px;
-      padding: 4px 0 4px 8px;
+      font-size: 18px;
+      padding: 4px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 23px;
+      }
+    }
+
+    &__date {
+      color: rgb(125, 125, 125);
+      padding: 4px;
+      font-size: 18px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 23px;
+      }
     }
 
     &::before {
@@ -67,7 +85,7 @@ export const Profile = styled.div`
       position: absolute;
       width: 2px;
       height: 100%;
-      top: 5%;
+      top: 0;
       bottom: 5%;
       transition: background-color 0.5s ease;
       background: linear-gradient(90deg, #1e1e1e, #333, #1e1e1e);
@@ -116,8 +134,32 @@ export const Descriptions = styled.section`
         }
       }
     }
+
     span {
       min-width: 80px;
+    }
+  }
+`
+
+export const SvgArrowSpan = styled.span`
+  background-color: #333;
+  width: 100%;
+
+  svg {
+    animation: go-back 1s infinite;
+  }
+
+  @keyframes go-back {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(1px);
+    }
+
+    100% {
+      transform: translateY(0);
     }
   }
 `

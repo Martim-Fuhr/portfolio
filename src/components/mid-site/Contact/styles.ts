@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../styles/themes/dark'
+import theme from '../../../app/theme'
 
 const SOCIAL_MEDIA_COLORS = {
   LINKEDIN: '#0E76A8',
@@ -53,13 +53,13 @@ export const SocialMedias = styled.div`
         }
       }
 
-      &.outlook {
+      /* &.outlook {
         svg {
           path:last-child {
             fill: ${SOCIAL_MEDIA_COLORS.OUTLOOK};
           }
         }
-      }
+      } */
     }
   }
 `

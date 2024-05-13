@@ -1,10 +1,10 @@
-import React from 'react'
+'use client'
 
 import { useBreakpoints } from '@/hooks/use-breakpoints'
 
 import { IconContext } from 'react-icons'
 import { Profile, TextParagraph } from './styles'
-import { FaReact, FaGitAlt } from 'react-icons/fa'
+import { FaReact, FaGitAlt, FaLaravel } from 'react-icons/fa'
 import {
   BiLogoJavascript,
   BiLogoTailwindCss,
@@ -12,6 +12,7 @@ import {
 } from 'react-icons/bi'
 import { TbBrandNextjs, TbBrandNodejs } from 'react-icons/tb'
 import {
+  SiPhp,
   SiStyledcomponents,
   SiGoogleoptimize,
   SiGoogletagmanager,
@@ -19,13 +20,12 @@ import {
 
 export function Skills() {
   const { isMobile } = useBreakpoints()
-  console.log(isMobile)
 
   return (
     <Profile id="skills'">
       <h2>Skills</h2>
       <TextParagraph>
-        Here is a bit of what I know and continue to learn:
+        Aqui está um pouco do que sei e continuo aprendendo:
       </TextParagraph>
       <IconContext.Provider value={{ size: `${isMobile ? 60 : 100}` }}>
         <div className="flex flex-wrap w-full gap-5">
@@ -37,6 +37,8 @@ export function Skills() {
           <BiLogoTailwindCss className="tw" title="TailWind CSS" />
           <FaGitAlt className="git" title="Git" />
           <TbBrandNodejs className="node" title="Node JS" />
+          <SiPhp className="php" title="PHP" />
+          <FaLaravel className="lrv" title="Laravel" />
           <SiGoogleoptimize className="go" title="Google Optimize" />
           <SiGoogletagmanager className="gtm" title="Google Tag Manager" />
         </div>

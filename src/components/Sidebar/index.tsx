@@ -1,17 +1,25 @@
-import React from 'react'
 import { Container, InfoList, SpanOverlay } from './styles'
 
 import { FaArrowLeft } from 'react-icons/fa'
 import Link from 'next/link'
 
-export function Sidebar({ active }: any) {
+interface SidebarProps {
+  active?: boolean | any
+  setActive: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export function Sidebar({ active, setActive }: SidebarProps) {
   const closeSidebar = () => {
-    active(false)
+    setActive(false)
   }
 
   return (
     <>
-      <Container sidebar={active} onClick={closeSidebar}>
+      <Container
+        className="bg-stone-900"
+        sidebar={active.toString()}
+        onClick={closeSidebar}
+      >
         <FaArrowLeft onClick={closeSidebar} />
         <InfoList>
           <Link href="#home" scroll={false}>
@@ -39,7 +47,7 @@ export function Sidebar({ active }: any) {
           </Link>
         </InfoList>
       </Container>
-      <SpanOverlay onClick={closeSidebar} />
+      <SpanOverlay sidebar={!active.toString()} onClick={closeSidebar} />
     </>
   )
 }

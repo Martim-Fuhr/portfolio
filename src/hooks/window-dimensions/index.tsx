@@ -1,57 +1,31 @@
-import { Props } from 'next/script'
-import { createContext, FC, useContext, useEffect, useState } from 'react'
+'use client'
 
-// import { browserUtils } from '@/utils'
-const browserUtils = () => typeof window === 'undefined'
+import { useState, useEffect } from 'react'
 
-type WindowDimensionsContextState = {
+interface WindowDimensions {
   width: number
-  height: number
 }
 
-const initialState = {
-  width: !browserUtils() ? window.innerWidth : 0,
-  height: !browserUtils() ? window.innerHeight : 0,
-}
-
-const WindowDimensionsContext =
-  createContext<WindowDimensionsContextState>(initialState)
-
-const WindowDimensionsProvider: React.FC<Props> = ({ children }) => {
-  const [isLoading, setIsLoading] = useState<boolean>(true)
-  const [windowSize, setWindowSize] = useState<{
-    width: number
-    height: number
-  }>(initialState)
+export function useWindowDimensions(): WindowDimensions {
+  const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>({
+    width: typeof window !== 'undefined' ? window.innerWidth : 0,
+  })
 
   useEffect(() => {
-    function handleResize() {
-      setWindowSize({
+    const handleResize = () => {
+      setWindowDimensions({
         width: window.innerWidth,
-        height: window.innerHeight,
       })
-
-      setIsLoading(false)
     }
 
     window.addEventListener('resize', handleResize)
 
-    handleResize()
-
-    return () => window.removeEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
   }, [])
 
-  if (!browserUtils() && isLoading) {
-    return null
-  }
-
-  return (
-    <WindowDimensionsContext.Provider value={windowSize}>
-      {children}
-    </WindowDimensionsContext.Provider>
-  )
+  return windowDimensions
 }
 
-const useWindowDimensions = () => useContext(WindowDimensionsContext)
-
-export { useWindowDimensions, WindowDimensionsProvider }
+export default useWindowDimensions

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../styles/themes/dark'
+import theme from '../../app/theme'
 
 export const Profile = styled.div`
   align-items: center;
@@ -21,8 +21,9 @@ export const ImageSection = styled.div`
   }
 `
 
-export const TextParagraph = styled.span`
+export const TextParagraph = styled.div`
   color: ${theme.colors.text};
+  text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 1px;
   text-align: justify;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../styles/themes/dark'
+import theme from '../../../app/theme'
 
 export const Profile = styled.div`
   align-items: center;
