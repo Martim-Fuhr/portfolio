@@ -1,7 +1,7 @@
 'use client'
 // import { useBreakpoints } from '@/hooks/use-breakpoints'
 import { Profile, Descriptions, SvgArrowSpan } from './styles'
-import { FaReact } from 'react-icons/fa'
+import { FaReact, FaLaravel, FaAws } from 'react-icons/fa'
 import { BiLogoJavascript, BiLogoSass, BiLogoTypescript } from 'react-icons/bi'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { IoMdArrowDropdownCircle } from 'react-icons/io'
@@ -17,7 +17,7 @@ export function Experiences() {
 
   // Repensar modelo mobile - Desk ta OK.
   // ajustar modelo desktop também, talvez fazer 2 versões
-  // Fazer setinha sumir ao abrir modal
+  // Fazer setinha sumir ao abrir modal e fazer a flecha girar
 
   return (
     <Profile>
@@ -29,19 +29,25 @@ export function Experiences() {
               title={
                 <>
                   <div className="flex flex-col md:flex-row">
-                    <div className="flex items-center justify-center">
+                    <div className="flex items-center justify-center md:w-52">
                       <Image
                         className="flex h-10"
                         src={facilitaImg}
                         alt="Facilita Logo"
-                        width="140"
-                        height="40"
+                        width="160"
+                        height="50"
                       />
                     </div>
                     <div>
-                      <p className="exps__title">Desenvolvedor FullStack</p>
-                      <p className="exps__company">Facilita System</p>
-                      <p className="exps__date">01/2024 - Até o momento</p>
+                      <p className="exps__title text-center sm:text-start">
+                        Desenvolvedor FullStack
+                      </p>
+                      <p className="exps__company text-center sm:text-start">
+                        Facilita System
+                      </p>
+                      <p className="exps__date text-center sm:text-start">
+                        01/2024 - Até o momento
+                      </p>
                     </div>
                   </div>
                   <SvgArrowSpan className="flex justify-center p-1">
@@ -52,7 +58,7 @@ export function Experiences() {
             >
               <li>Implementação de novas funcionalidades;</li>
               <li>Automação de testes;</li>
-              <li>Melhorias de SEO;</li>
+              <li>Correção de Bugs;</li>
               <li>Fatoração de códigos legados.</li>
               <div>
                 <p className="flex text-xl uppercase p-3 justify-center w-full text-center">
@@ -60,44 +66,35 @@ export function Experiences() {
                 </p>
                 <span className="flex-1 flex flex-row justify-evenly flex-wrap w-full pb-5">
                   <span className="flex flex-col text-sm text-center w-4/12">
-                    <FaReact
+                    <FaLaravel
                       size={100}
                       className="w-full flex justify-center"
                     />
-                    <p>ReactJs</p>
+                    <p>Lavarel - PHP</p>
                   </span>
 
                   <span className="flex flex-col text-sm text-center w-4/12">
-                    <BiLogoTypescript
+                    <BiLogoJavascript
                       size={100}
                       className="w-full flex justify-center"
                     />
-                    <p>TypeScript</p>
+                    <p>JS - React - Angular</p>
                   </span>
 
                   <span className="flex flex-col text-sm text-center w-4/12">
-                    <TbBrandNextjs
-                      size={100}
-                      className="w-full flex justify-center"
-                    />
-                    <p>NextJs</p>
+                    <FaAws size={100} className="w-full flex justify-center" />
+                    <p>AWS Services</p>
                   </span>
                 </span>
               </div>
               <div>
                 <ul>
-                  Principais entregas:
+                  <p className="pb-4 text-lg">Principais entregas:</p>
                   <li>
-                    Entrega do MVP do <Link href="picnut.com.br">teste</Link>
+                    Entrega do MVP do&nbsp;
+                    <Link href="picnut.com.br">Picnut</Link>
                   </li>
-                  <li>
-                    Criação do Hover com Imagens nas Páginas de Categoria nos
-                    sites da companhia
-                  </li>
-                  <li>
-                    Criação e personalização do Gerador de Blog da Companhia
-                    para sites de renome como Vans e Schutz
-                  </li>
+                  <li>Validação de Conta com Token via SMS do SMSFunnel</li>
                 </ul>
               </div>
             </Accordion>
@@ -111,7 +108,7 @@ export function Experiences() {
               title={
                 <>
                   <div className="flex flex-col md:flex-row">
-                    <div className="flex items-center justify-center">
+                    <div className="flex items-center justify-center md:w-52">
                       <Image
                         className="flex h-10"
                         src={arezzoSvg}
@@ -121,9 +118,15 @@ export function Experiences() {
                       />
                     </div>
                     <div>
-                      <p className="exps__title">Analista Frontend I</p>
-                      <p className="exps__company">Arezzo&Co</p>
-                      <p className="exps__date">01/2022 - 03/2023</p>
+                      <p className="exps__title text-center sm:text-start">
+                        Analista Frontend I
+                      </p>
+                      <p className="exps__company text-center sm:text-start">
+                        Arezzo&Co
+                      </p>
+                      <p className="exps__date text-center sm:text-start">
+                        01/2022 - 03/2023
+                      </p>
                     </div>
                   </div>
                   <SvgArrowSpan className="flex justify-center p-1">
@@ -178,7 +181,7 @@ export function Experiences() {
               </div>
               <div>
                 <ul>
-                  Principais entregas:
+                  <p className="pb-4 text-lg">Principais entregas:</p>
                   <li>
                     Criação do Hover Com Video nas Páginas de Categorias nos
                     sites da companhia
@@ -204,7 +207,7 @@ export function Experiences() {
               title={
                 <>
                   <div className="flex flex-col md:flex-row">
-                    <div className="flex items-center justify-center flex-row gap-5">
+                    <div className="flex items-center justify-center md:w-52 flex-row gap-5">
                       <Image
                         className="flex h-10"
                         src={arezzoSvg}
@@ -224,8 +227,12 @@ export function Experiences() {
                       <p className="exps__title text-center sm:text-start">
                         Desenvolvedor Frontend Trainee
                       </p>
-                      <p className="exps__company">Arezzo&co | GrowDev</p>
-                      <p className="exps__date">06/2021 - 01/2022</p>
+                      <p className="exps__company text-center sm:text-start">
+                        Arezzo&co | GrowDev
+                      </p>
+                      <p className="exps__date text-center sm:text-start">
+                        06/2021 - 01/2022
+                      </p>
                     </div>
                   </div>
                   <SvgArrowSpan className="flex justify-center p-1">
@@ -271,7 +278,7 @@ export function Experiences() {
               </div>
               <div>
                 <ul>
-                  Principais entregas:
+                  <p className="pb-4 text-lg">Principais entregas:</p>
                   <li>
                     Criação da v1 do ZZPay, a ferramenta de cashback da
                     Arezzo&Co

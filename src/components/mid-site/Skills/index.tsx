@@ -25,7 +25,7 @@ export function Skills() {
     <Profile id="skills'">
       <h2>Skills</h2>
       <TextParagraph>
-        Aqui está um pouco do que sei e continuo aprendendo:
+        E aqui se encontra um pouco daquilo que sei...
       </TextParagraph>
       <IconContext.Provider value={{ size: `${isMobile ? 60 : 100}` }}>
         <div className="flex flex-wrap w-full gap-5">
