@@ -11,8 +11,14 @@ import growdevSvg from '../../../../public/images/icon.webp'
 import Accordion from './accordion'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 
 export function Experiences() {
+  const [openAccordion, setOpenAccordion] = useState(false)
+
+  const handleAccordionToggle = () => {
+    setOpenAccordion(!openAccordion)
+  }
   // const { isMobile } = useBreakpoints()
 
   // Repensar modelo mobile - Desk ta OK.
@@ -50,7 +56,12 @@ export function Experiences() {
                       </p>
                     </div>
                   </div>
-                  <SvgArrowSpan className="flex justify-center p-1">
+                  <SvgArrowSpan
+                    onClick={handleAccordionToggle}
+                    className={`flex justify-center p-1 ${
+                      openAccordion ? 'rotate-180' : ''
+                    }`}
+                  >
                     <IoMdArrowDropdownCircle />
                   </SvgArrowSpan>
                 </>
@@ -90,11 +101,15 @@ export function Experiences() {
               <div>
                 <ul>
                   <p className="pb-4 text-lg">Principais entregas:</p>
+                  <li>Validação de Conta com Token via SMS do SMSFunnel</li>
+                  <li>
+                    Implementação de Testes Automatizados com Cypress no
+                    SMSFunnel
+                  </li>
                   <li>
                     Entrega do MVP do&nbsp;
                     <Link href="picnut.com.br">Picnut</Link>
                   </li>
-                  <li>Validação de Conta com Token via SMS do SMSFunnel</li>
                 </ul>
               </div>
             </Accordion>
@@ -129,7 +144,12 @@ export function Experiences() {
                       </p>
                     </div>
                   </div>
-                  <SvgArrowSpan className="flex justify-center p-1">
+                  <SvgArrowSpan
+                    onClick={handleAccordionToggle}
+                    className={`flex justify-center p-1 ${
+                      openAccordion ? 'rotate-180' : ''
+                    }`}
+                  >
                     <IoMdArrowDropdownCircle />
                   </SvgArrowSpan>
                 </>
@@ -235,7 +255,12 @@ export function Experiences() {
                       </p>
                     </div>
                   </div>
-                  <SvgArrowSpan className="flex justify-center p-1">
+                  <SvgArrowSpan
+                    onClick={handleAccordionToggle}
+                    className={`flex justify-center p-1 ${
+                      openAccordion ? 'rotate-180' : ''
+                    }`}
+                  >
                     <IoMdArrowDropdownCircle />
                   </SvgArrowSpan>
                 </>

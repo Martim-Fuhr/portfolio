@@ -11,11 +11,7 @@ const SOCIAL_MEDIA_COLORS = {
 export const SocialMedias = styled.div`
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 25px;
-  padding: 15px 0;
-  width: 100%;
 
   a {
     svg {
@@ -52,14 +48,6 @@ export const SocialMedias = styled.div`
           }
         }
       }
-
-      /* &.outlook {
-        svg {
-          path:last-child {
-            fill: ${SOCIAL_MEDIA_COLORS.OUTLOOK};
-          }
-        }
-      } */
     }
   }
 `

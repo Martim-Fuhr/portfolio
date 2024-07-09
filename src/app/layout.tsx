@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <StyledComponentsRegistry>
-        <body className="bg-stone-700">
+        <body>
           <Header />
           {children}
           <Footer />

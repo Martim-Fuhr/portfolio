@@ -9,7 +9,7 @@ const AccordionStyle = styled.div`
     border: 0;
     border-radius: 5px;
     box-shadow: -5px -5px 15px -15px rgba(255, 255, 255, 0.7) inset;
-    background-color: ${theme.colors.blackLight};
+    background-color: ${theme.colors.newBackgroundColor};
     color: ${theme.colors.white};
     cursor: pointer;
     display: flex;
@@ -20,7 +20,7 @@ const AccordionStyle = styled.div`
     width: 100%;
 
     &.open {
-      box-shadow: none;
+      box-shadow: -5px 12px 15px -14px rgba(255, 255, 255, 0.7) inset;
       border-radius: 5px 5px 0 0;
     }
 
@@ -60,9 +60,9 @@ const AccordionStyle = styled.div`
   }
 
   .accordion-content {
-    background-color: ${theme.colors.blackLight};
-    color: ${theme.colors.whiteAccordion};
+    background-color: ${theme.colors.newBackgroundColor};
     border-radius: 0 0 5px 5px;
+    color: ${theme.colors.whiteAccordion};
     max-height: 0;
     overflow: hidden;
     transition: 0.2s linear;
@@ -75,6 +75,7 @@ const AccordionStyle = styled.div`
     }
 
     &.show {
+      box-shadow: -5px -5px 15px -15px rgba(255, 255, 255, 0.7) inset;
       max-height: fit-content;
       overflow: hidden;
       margin-bottom: 10px;

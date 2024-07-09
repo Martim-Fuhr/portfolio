@@ -2,7 +2,6 @@
 
 import React, { ReactNode, useState } from 'react'
 import AccordionStyle from './styled'
-import { GiClick } from 'react-icons/gi'
 
 interface AccordionProps {
   title: ReactNode
@@ -19,7 +18,6 @@ export default function Accordion({ title, children }: AccordionProps) {
         onClick={() => setIsOpen(!isOpen)}
       >
         <h3 className="accordion-name-title w-full">{title}</h3>
-        {/* <GiClick /> */}
       </button>
       <ul className={`accordion-content ${isOpen ? 'show' : ''}`}>
         {children}

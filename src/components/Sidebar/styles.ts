@@ -8,6 +8,7 @@ interface ContainerProps {
 export const Container = styled.ul<ContainerProps>`
   animation: showSidebar 0.6s;
   align-items: center;
+  background-color: ${theme.colors.newBackgroundColorSecond};
   box-shadow: 0 0 30px -20px ${theme.colors.black};
   color: ${theme.colors.whiteAccordion};
   display: flex;
@@ -94,7 +95,7 @@ export const InfoList = styled.li`
 
 export const SpanOverlay = styled.span<ContainerProps>`
   animation: 0.5s;
-  background-color: ${theme.colors.backgroundSecondary};
+  background-color: ${theme.colors.newBackgroundColor};
   flex-direction: column;
   display: ${(props) => (props.sidebar ? 'none' : 'flex')};
   height: 100vh;

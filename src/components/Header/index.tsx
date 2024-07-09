@@ -37,7 +37,6 @@ export function Header() {
   const showSideBar = () => setSidebar(!sidebar)
   return (
     <HeaderSection
-      className="bg-stone-900"
       style={{
         transform: isHeaderVisible ? 'translateY(0)' : 'translateY(-100%)',
         transition: 'transform 0.3s ease-in-out',

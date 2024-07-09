@@ -142,24 +142,14 @@ export const Descriptions = styled.section`
 `
 
 export const SvgArrowSpan = styled.span`
-  background-color: #333;
-  width: 100%;
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
 
-  svg {
-    animation: go-back 1s infinite;
-  }
-
-  @keyframes go-back {
-    0% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(1px);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
+  .rotate-180 {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
   }
 `

@@ -15,11 +15,7 @@ export function Sidebar({ active, setActive }: SidebarProps) {
 
   return (
     <>
-      <Container
-        className="bg-stone-900"
-        sidebar={active.toString()}
-        onClick={closeSidebar}
-      >
+      <Container sidebar={active.toString()} onClick={closeSidebar}>
         <FaArrowLeft onClick={closeSidebar} />
         <InfoList>
           <Link href="#home" scroll={false}>

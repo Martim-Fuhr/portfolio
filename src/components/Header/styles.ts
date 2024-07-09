@@ -3,6 +3,7 @@ import theme from '@/app/theme'
 
 export const HeaderSection = styled.header`
   align-items: center;
+  background-color: ${theme.colors.newBackgroundColorSecond};
   box-shadow: 0 0 20px 3px ${theme.colors.black};
   display: flex;
   flex-direction: row;

@@ -6,6 +6,10 @@ export default {
     primary: '#092020',
     secondary: '#0D3030',
 
+    newBackgroundColor: '#1e1530',
+    newBackgroundColorSecond: '#1d0c3a',
+    backgroundReserve: '#1a1328',
+
     background: '#333',
     backgroundSecondary: '#222',
     text: '#FCFFFC',
