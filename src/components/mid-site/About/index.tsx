@@ -8,7 +8,7 @@ export function About() {
       <h2 id="about">About</h2>
       <TextParagraph>
         Me chamo Martim Fuhr, tenho 26 anos e sou Gaúcho, Tchê! Trabalho como
-        Desenvolvedor Frontend há 2 anos, com foco em React. Minha jornada na
+        Desenvolvedor Frontend há 03 anos, com foco em React. Minha jornada na
         como programador iniciou-se em Junho/2021, quando ingressei no curso de
         Desenvolvedor FullStack, oferecido pela GrowDev. Ali, obtive minha
         primeira experiência profissional, através de um programa para jovens
