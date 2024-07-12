@@ -7,7 +7,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Martim Fuhr | Portfolio',
+  title: 'Martim Fuhr',
   description: 'Welcome to my Portfolio',
   icons: {
     icon: '/favicon/favicon.ico',

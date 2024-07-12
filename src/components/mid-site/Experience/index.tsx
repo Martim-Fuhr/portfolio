@@ -9,7 +9,6 @@ import arezzoSvg from '../../../../public/icons/arezzo.svg'
 import facilitaImg from '../../../../public/images/facilita.png'
 import growdevSvg from '../../../../public/images/icon.webp'
 import Accordion from './accordion'
-import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -106,10 +105,7 @@ export function Experiences() {
                     Implementação de Testes Automatizados com Cypress no
                     SMSFunnel
                   </li>
-                  <li>
-                    Entrega do MVP do&nbsp;
-                    <Link href="picnut.com.br">Picnut</Link>
-                  </li>
+                  <li>Entrega do MVP do Picnut</li>
                 </ul>
               </div>
             </Accordion>

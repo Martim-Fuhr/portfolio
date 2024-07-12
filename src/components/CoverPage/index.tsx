@@ -2,7 +2,6 @@
 
 import { IMAGES } from '@/images'
 import Image from 'next/image'
-import { FaHandSpock } from 'react-icons/fa'
 import { Contact } from '@/components/mid-site/Contact'
 import { Profile, TextWrapper } from './styles'
 import { useBreakpoints } from '@/hooks/use-breakpoints'

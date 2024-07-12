@@ -23,24 +23,16 @@ export function Sidebar({ active, setActive }: SidebarProps) {
           </Link>
         </InfoList>
         <InfoList>
-          <Link href="#about" scroll={false}>
-            About
-          </Link>
+          <Link href="#about">About</Link>
         </InfoList>
         <InfoList>
-          <Link href="#experience" scroll={false}>
-            Experience
-          </Link>
+          <Link href="#experience">Experience</Link>
         </InfoList>
         <InfoList>
-          <Link href="#skills'" scroll={false}>
-            Skills
-          </Link>
+          <Link href="#skills">Skills</Link>
         </InfoList>
         <InfoList>
-          <Link href="#contact" scroll={false}>
-            Contact
-          </Link>
+          <Link href="#contact">Contact</Link>
         </InfoList>
       </Container>
       <SpanOverlay sidebar={!active.toString()} onClick={closeSidebar} />

@@ -22,7 +22,7 @@ export function Skills() {
   const { isMobile } = useBreakpoints()
 
   return (
-    <Profile id="skills'">
+    <Profile id="skills">
       <h2>Skills</h2>
       <TextParagraph>
         E aqui se encontra um pouco daquilo que sei...
