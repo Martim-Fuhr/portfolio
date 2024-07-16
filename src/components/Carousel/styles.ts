@@ -52,7 +52,7 @@ export const CarouselSection = styled.div`
       height: 240px;
     }
 
-    @media (min-width: 992px) and (max-width: 1366px) {
+    @media (min-width: 992px) and (max-width: 1360px) {
       height: 300px;
     }
   }
