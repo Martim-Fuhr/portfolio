@@ -37,8 +37,41 @@ export const CarouselSection = styled.div`
   }
 
   .slide-item {
-    height: 375px;
+    height: 100%;
+    max-height: 450px;
     width: 100%;
-    object-fit: contain;
+  }
+
+  .slide-image {
+    display: flex;
+    height: 100%;
+    max-height: 360px;
+    width: auto;
+
+    @media (min-width: 768px) and (max-width: 992px) {
+      height: 240px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1366px) {
+      height: 300px;
+    }
+  }
+
+  .badge {
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    height: min-content;
+    padding: 0.2em 0.5em;
+  }
+
+  .Frontend {
+    background-color: #e0f7fa;
+    color: #006064;
+  }
+
+  .Fullstack {
+    background-color: #ffecb3;
+    color: #ff6f00;
   }
 `
