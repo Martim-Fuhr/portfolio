@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import theme from '../../app/theme'
 
-export const Profile = styled.div`
+export const Profile = styled.section`
   align-items: center;
   display: flex;
   justify-content: center;

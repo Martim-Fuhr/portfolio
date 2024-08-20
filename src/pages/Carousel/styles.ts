@@ -25,7 +25,7 @@ export const H2Title = styled.h2`
   }
 `
 
-export const CarouselSection = styled.div`
+export const CarouselSection = styled.section`
   width: 100%;
   align-items: center;
   margin: 25px 0 25px 0;

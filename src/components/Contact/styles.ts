@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../../app/theme'
+import theme from '../../app/theme'
 
 const SOCIAL_MEDIA_COLORS = {
   LINKEDIN: '#0E76A8',

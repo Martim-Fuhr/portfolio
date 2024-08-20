@@ -15,8 +15,8 @@ export function About() {
         talentos na @Arezzo&Co. Fui selecionado para um programa de estágio,
         onde permaneci até março de 2023. Atualmente trabalho em uma startup
         como Desenvolvedor FullStack, com foco em PHP e JavaScript. <br />
-        Estou no 3º semestre do curso de Gestão de TI na Universidade do Vale
-        dos Sinos (UNISINOS)
+        Estou no 4º semestre do curso de Gestão de TI na UNISINOS - Universidade
+        do Vale dos Sinos.
       </TextParagraph>
     </Profile>
   )

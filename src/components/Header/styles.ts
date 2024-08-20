@@ -11,6 +11,7 @@ export const HeaderSection = styled.header`
   max-width: 1920px;
   width: 100%;
   position: fixed;
+  top: 0;
   z-index: 2;
 `
 

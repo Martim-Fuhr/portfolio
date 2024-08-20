@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import theme from '../../../app/theme'
+import theme from '../../app/theme'
 
-export const Profile = styled.div`
+export const Profile = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@ export const Profile = styled.div`
     font-family: 'IBM Plex Mono', monospace;
     font-size: 48px;
     font-weight: 800;
-    text-align: right;
+    text-align: left;
     position: relative;
     width: 100%;
 
@@ -24,7 +24,7 @@ export const Profile = styled.div`
       height: 2px;
       margin: -10px 0 10px 0;
       min-width: 200px;
-      right: 0;
+      left: 0;
       position: absolute;
       width: 50%;
     }

@@ -1,5 +1,5 @@
-import Contact from '../mid-site/Contact'
-// arrumar isso
+import Contact from '../Contact'
+
 export function Footer() {
   return (
     <footer className="flex align-bottom justify-center flex-col px-24">

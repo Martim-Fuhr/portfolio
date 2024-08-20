@@ -1,14 +1,14 @@
 'use client'
-// import { useBreakpoints } from '@/hooks/use-breakpoints'
-import { Profile, Descriptions, SvgArrowSpan } from './styles'
+
+import { ExperienceSection, Descriptions, SvgArrowSpan } from './styles'
 import { FaReact, FaLaravel, FaAws } from 'react-icons/fa'
 import { BiLogoJavascript, BiLogoSass, BiLogoTypescript } from 'react-icons/bi'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { IoMdArrowDropdownCircle } from 'react-icons/io'
-import arezzoSvg from '../../../../public/icons/arezzo.svg'
-import facilitaImg from '../../../../public/images/facilita.png'
-import growdevSvg from '../../../../public/images/icon.webp'
-import Accordion from './accordion'
+import arezzoSvg from '../../../public/icons/arezzo.svg'
+import facilitaImg from '../../../public/images/facilita.png'
+import growdevSvg from '../../../public/images/icon.webp'
+import Accordion from '../../components/accordion'
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -18,14 +18,9 @@ export function Experiences() {
   const handleAccordionToggle = () => {
     setOpenAccordion(!openAccordion)
   }
-  // const { isMobile } = useBreakpoints()
-
-  // Repensar modelo mobile - Desk ta OK.
-  // ajustar modelo desktop também, talvez fazer 2 versões
-  // Fazer setinha sumir ao abrir modal e fazer a flecha girar
 
   return (
-    <Profile>
+    <ExperienceSection>
       <h2 id="experience">Experience</h2>
       <div className="exps">
         <Descriptions>
@@ -44,13 +39,13 @@ export function Experiences() {
                       />
                     </div>
                     <div>
-                      <p className="exps__title text-center sm:text-start">
+                      <p className="exps__title text-center md:text-start">
                         Desenvolvedor FullStack
                       </p>
-                      <p className="exps__company text-center sm:text-start">
+                      <p className="exps__company text-center md:text-start">
                         Facilita System
                       </p>
-                      <p className="exps__date text-center sm:text-start">
+                      <p className="exps__date text-center md:text-start">
                         01/2024 - Até o momento
                       </p>
                     </div>
@@ -129,13 +124,13 @@ export function Experiences() {
                       />
                     </div>
                     <div>
-                      <p className="exps__title text-center sm:text-start">
+                      <p className="exps__title text-center md:text-start">
                         Analista Frontend I
                       </p>
-                      <p className="exps__company text-center sm:text-start">
+                      <p className="exps__company text-center md:text-start">
                         Arezzo&Co
                       </p>
-                      <p className="exps__date text-center sm:text-start">
+                      <p className="exps__date text-center md:text-start">
                         01/2022 - 03/2023
                       </p>
                     </div>
@@ -240,13 +235,13 @@ export function Experiences() {
                       />
                     </div>
                     <div>
-                      <p className="exps__title text-center sm:text-start">
+                      <p className="exps__title text-center md:text-start">
                         Desenvolvedor Frontend Trainee
                       </p>
-                      <p className="exps__company text-center sm:text-start">
+                      <p className="exps__company text-center md:text-start">
                         Arezzo&co | GrowDev
                       </p>
-                      <p className="exps__date text-center sm:text-start">
+                      <p className="exps__date text-center md:text-start">
                         06/2021 - 01/2022
                       </p>
                     </div>
@@ -311,7 +306,7 @@ export function Experiences() {
           </div>
         </Descriptions>
       </div>
-    </Profile>
+    </ExperienceSection>
   )
 }
 

@@ -2,7 +2,7 @@
 
 import { IMAGES } from '@/images'
 import Image from 'next/image'
-import { Contact } from '@/components/mid-site/Contact'
+import { Contact } from '@/components/Contact'
 import { Profile, TextWrapper } from './styles'
 import { useBreakpoints } from '@/hooks/use-breakpoints'
 
@@ -16,7 +16,7 @@ export function CoverPage() {
         width={isMobile ? 300 : 350}
         height={isMobile ? 300 : 350}
         alt="foto de perfil Martim Fuhr"
-        className="flex rounded-full "
+        className="flex rounded-full"
       />
     )
   }

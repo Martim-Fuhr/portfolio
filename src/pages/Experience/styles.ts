@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import theme from '../../../app/theme'
+import theme from '../../app/theme'
 
-export const Profile = styled.div`
+export const ExperienceSection = styled.section`
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -12,10 +12,9 @@ export const Profile = styled.div`
   h2 {
     color: ${theme.colors.text};
     font-family: 'IBM Plex Mono', monospace;
-    align-self: flex-start;
+    text-align: right;
     font-size: 38px;
     font-weight: 800;
-    align-items: start;
     position: relative;
     width: 100%;
 
@@ -24,7 +23,7 @@ export const Profile = styled.div`
       content: '';
       display: flex;
       height: 2px;
-      left: 0;
+      right: 0;
       margin: -10px 0 10px 0;
       min-width: 200px;
       position: absolute;

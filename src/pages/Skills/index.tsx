@@ -3,7 +3,7 @@
 import { useBreakpoints } from '@/hooks/use-breakpoints'
 
 import { IconContext } from 'react-icons'
-import { Profile, TextParagraph } from './styles'
+import { SkillSection, TextParagraph } from './styles'
 import { FaReact, FaGitAlt, FaLaravel } from 'react-icons/fa'
 import {
   BiLogoJavascript,
@@ -22,7 +22,7 @@ export function Skills() {
   const { isMobile } = useBreakpoints()
 
   return (
-    <Profile id="skills">
+    <SkillSection id="skills">
       <h2>Skills</h2>
       <TextParagraph>
         E aqui se encontra um pouco daquilo que sei...
@@ -43,7 +43,7 @@ export function Skills() {
           <SiGoogletagmanager className="gtm" title="Google Tag Manager" />
         </div>
       </IconContext.Provider>
-    </Profile>
+    </SkillSection>
   )
 }
 

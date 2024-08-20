@@ -1,20 +1,34 @@
-import { About } from '@/components/mid-site/About'
-import { Experiences } from '@/components/mid-site/Experience'
-import { Skills } from '@/components/mid-site/Skills'
-import { Carousel } from '@/components/Carousel'
+import dynamic from 'next/dynamic'
+import { Suspense } from 'react'
 
-import CoverPage from '@/components/CoverPage'
+const CoverPage = dynamic(() => import('@/pages/CoverPage'), {
+  ssr: false,
+})
+
+const Experiences = dynamic(() => import('@/pages/Experience'), {
+  ssr: false,
+})
+
+const About = dynamic(() => import('@/pages/About'), {
+  ssr: false,
+})
+
+const Skills = dynamic(() => import('@/pages/Skills'), {
+  ssr: false,
+})
+
+const Carousel = dynamic(() => import('@/pages/Carousel'), {
+  ssr: false,
+})
 
 export default function Home() {
   return (
-    <>
-      <div className="flex justify-center items-center flex-col m-auto max-w-screen-2xl overflow-x-hidden">
-        <CoverPage />
-        <Carousel />
-        <About />
-        <Experiences />
-        <Skills />
-      </div>
-    </>
+    <Suspense fallback={<div>Loading...</div>}>
+      <CoverPage />
+      <Carousel />
+      <Experiences />
+      <About />
+      <Skills />
+    </Suspense>
   )
 }

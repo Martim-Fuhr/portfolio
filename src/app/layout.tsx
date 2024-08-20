@@ -1,14 +1,20 @@
 import type { Metadata } from 'next'
 import './globals.css'
-
 import StyledComponentsRegistry from './../lib/registry'
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import dynamic from 'next/dynamic'
+
+const HeaderDynamic = dynamic(() => import('@/components/Header'), {
+  ssr: false,
+})
+
+const FooterDynamic = dynamic(() => import('@/components/Footer'), {
+  ssr: false,
+})
 
 export const metadata: Metadata = {
   title: 'Martim Fuhr',
-  description: 'Welcome to my Portfolio',
+  description: 'Seja bem-vindo à meu portfolio!',
   icons: {
     icon: '/favicon/favicon.ico',
   },
@@ -23,9 +29,9 @@ export default function RootLayout({
     <html lang="pt-BR">
       <StyledComponentsRegistry>
         <body>
-          <Header />
+          <HeaderDynamic />
           {children}
-          <Footer />
+          <FooterDynamic />
         </body>
       </StyledComponentsRegistry>
     </html>

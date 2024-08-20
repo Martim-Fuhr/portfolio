@@ -2,6 +2,7 @@
 
 import { IMAGES } from '@/images'
 import Image from 'next/image'
+import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { CarouselSection, H2Title } from './styles'
 import 'swiper/css'
@@ -97,3 +98,5 @@ export function Carousel() {
     </>
   )
 }
+
+export default Carousel
