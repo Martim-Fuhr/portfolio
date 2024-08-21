@@ -1,23 +1,23 @@
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 
-const CoverPage = dynamic(() => import('@/pages/CoverPage'), {
+const CoverPage = dynamic(() => import('@/layouts/CoverPage'), {
   ssr: false,
 })
 
-const Experiences = dynamic(() => import('@/pages/Experience'), {
+const Experiences = dynamic(() => import('@/layouts/Experience'), {
   ssr: false,
 })
 
-const About = dynamic(() => import('@/pages/About'), {
+const About = dynamic(() => import('@/layouts/About'), {
   ssr: false,
 })
 
-const Skills = dynamic(() => import('@/pages/Skills'), {
+const Skills = dynamic(() => import('@/layouts/Skills'), {
   ssr: false,
 })
 
-const Carousel = dynamic(() => import('@/pages/Carousel'), {
+const Carousel = dynamic(() => import('@/layouts/Carousel'), {
   ssr: false,
 })
 
