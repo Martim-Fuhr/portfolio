@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../app/theme'
+import theme from '../../../app/theme'
 
 export const ExperienceSection = styled.section`
   align-items: center;

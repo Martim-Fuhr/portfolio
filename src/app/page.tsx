@@ -1,34 +1,30 @@
 import dynamic from 'next/dynamic'
-import { Suspense } from 'react'
 
-const CoverPage = dynamic(() => import('@/sections/CoverPage'), {
+// const CoverPage = dynamic(() => import('@/components/sections/CoverPage'), {
+//   ssr: false,
+// })
+
+// const Carousel = dynamic(() => import('@/components/sections/Carousel'), {
+//   ssr: false,
+// })
+
+const Experiences = dynamic(() => import('@/components/sections/Experience'), {
   ssr: false,
 })
 
-const Experiences = dynamic(() => import('@/sections/Experience'), {
+const About = dynamic(() => import('@/components/sections/About'), {
   ssr: false,
 })
 
-const About = dynamic(() => import('@/sections/About'), {
+const Skills = dynamic(() => import('@/components/sections/Skills'), {
   ssr: false,
 })
 
-const Skills = dynamic(() => import('@/sections/Skills'), {
-  ssr: false,
-})
-
-const Carousel = dynamic(() => import('@/sections/Carousel'), {
-  ssr: false,
-})
-
+import { CoverPage } from '@/components/sections/CoverPage'
+import { Carousel } from '@/components/sections/Carousel'
+ 
 export default function Home() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <CoverPage />
-      <Carousel />
-      <Experiences />
-      <About />
-      <Skills />
-    </Suspense>
+    <><CoverPage /><Carousel /><Experiences /><About /><Skills /></>
   )
 }

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import theme from '../../app/theme'
+import theme from '../../../app/theme'
 
 export const H2Title = styled.h2`
   color: ${theme.colors.text};
