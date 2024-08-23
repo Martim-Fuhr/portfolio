@@ -28,7 +28,7 @@ export const H2Title = styled.h2`
 export const CarouselSection = styled.section`
   width: 100%;
   align-items: center;
-  margin: 25px 0 25px 0;
+  margin: 25px 0 125px 0;
   padding: 0 8%;
 
   .swiper.swiper-initialized {

@@ -22,8 +22,8 @@ export function Skills() {
   const { isMobile } = useBreakpoints()
 
   return (
-    <SkillSection id="skills">
-      <h2>Skills</h2>
+    <SkillSection id="habilidades">
+      <h2>Habilidades:</h2>
       <TextParagraph>
         E aqui se encontra um pouco daquilo que sei...
       </TextParagraph>

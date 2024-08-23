@@ -5,4 +5,5 @@
 body {
   background-color: #1e1530;
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }

@@ -5,7 +5,7 @@ import { Profile, TextParagraph } from './styles'
 export function About() {
   return (
     <Profile>
-      <h2 id="about">About</h2>
+      <h2 id="sobre">Sobre mim:</h2>
       <TextParagraph>
         Me chamo Martim Fuhr, tenho 26 anos e sou Gaúcho, Tchê! Trabalho como
         Desenvolvedor Frontend há 03 anos, com foco em React. Minha jornada na

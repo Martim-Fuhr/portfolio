@@ -21,7 +21,7 @@ export function Experiences() {
 
   return (
     <ExperienceSection>
-      <h2 id="experience">Experience</h2>
+      <h2 id="experiencia">Experiência:</h2>
       <div className="exps">
         <Descriptions>
           <div className="accordions">

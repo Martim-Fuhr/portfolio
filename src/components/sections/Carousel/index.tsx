@@ -53,7 +53,7 @@ export function Carousel() {
   return (
     <>
       <CarouselSection>
-        <H2Title id="deliveries">Main Deliveries:</H2Title>
+        <H2Title id="entregas">Principais Entregas:</H2Title>
         <Swiper
           loop={true}
           spaceBetween={50}
