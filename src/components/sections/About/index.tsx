@@ -13,8 +13,10 @@ export function About() {
         Desenvolvedor FullStack, oferecido pela GrowDev. Ali, obtive minha
         primeira experiência profissional, através de um programa para jovens
         talentos na @Arezzo&Co. Fui selecionado para um programa de estágio,
-        onde permaneci até março de 2023. Atualmente trabalho em uma startup
-        como Desenvolvedor FullStack, com foco em PHP e JavaScript. <br />
+        onde permaneci até março de 2023. Passei uma startup como Desenvolvedor
+        FullStack, com foco em PHP e JavaScript. Atualmente trabalho no Grupo
+        Meireles e Freitas, com React e C#
+        <br />
         Estou no 4º semestre do curso de Gestão de TI na UNISINOS - Universidade
         do Vale dos Sinos.
       </TextParagraph>

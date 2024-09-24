@@ -4,9 +4,11 @@ import { ExperienceSection, Descriptions, SvgArrowSpan } from './styles'
 import { FaReact, FaLaravel, FaAws } from 'react-icons/fa'
 import { BiLogoJavascript, BiLogoSass, BiLogoTypescript } from 'react-icons/bi'
 import { TbBrandNextjs } from 'react-icons/tb'
+import { SiCsharp } from 'react-icons/si'
 import { IoMdArrowDropdownCircle } from 'react-icons/io'
 import arezzoSvg from '../../../../public/icons/arezzo.svg'
 import facilitaImg from '../../../../public/images/facilita.png'
+import meirelesFreitas from '../../../../public/images/mf-logo.png'
 import growdevSvg from '../../../../public/images/icon.webp'
 import Accordion from '../../../components/accordion'
 import Image from 'next/image'
@@ -32,6 +34,79 @@ export function Experiences() {
                     <div className="flex items-center justify-center md:w-52">
                       <Image
                         className="flex h-10"
+                        src={meirelesFreitas}
+                        alt="MF Logo"
+                        width="180"
+                        height="50"
+                      />
+                    </div>
+                    <div>
+                      <p className="exps__title text-center md:text-start">
+                        Desenvolvedor FullStack Pleno
+                      </p>
+                      <p className="exps__company text-center md:text-start">
+                        Grupo Meireles e Freitas
+                      </p>
+                      <p className="exps__date text-center md:text-start">
+                        10/2024 - o momento
+                      </p>
+                    </div>
+                  </div>
+                  <SvgArrowSpan
+                    onClick={handleAccordionToggle}
+                    className={`flex justify-center p-1 ${
+                      openAccordion ? 'rotate-180' : ''
+                    }`}
+                  >
+                    <IoMdArrowDropdownCircle />
+                  </SvgArrowSpan>
+                </>
+              }
+            >
+              <div>
+                <p className="flex text-xl uppercase p-3 justify-center w-full text-center">
+                  principais tecnologias utilizadas aqui:
+                </p>
+                <span className="flex-1 flex flex-row justify-evenly flex-wrap w-full pb-5">
+                  <span className="flex flex-col text-sm text-center w-4/12">
+                    <FaReact
+                      size={100}
+                      className="w-full flex justify-center"
+                    />
+                    <p>ReactJs</p>
+                  </span>
+
+                  <span className="flex flex-col text-sm text-center w-4/12">
+                    <BiLogoTypescript
+                      size={100}
+                      className="w-full flex justify-center"
+                    />
+                    <p>TypeScript</p>
+                  </span>
+
+                  <span className="flex flex-col text-sm text-center w-4/12">
+                    <SiCsharp
+                      size={100}
+                      className="w-full flex justify-center"
+                    />
+                    <p>C#</p>
+                  </span>
+                </span>
+              </div>
+            </Accordion>
+          </div>
+        </Descriptions>
+      </div>
+      <div className="exps">
+        <Descriptions>
+          <div className="accordions">
+            <Accordion
+              title={
+                <>
+                  <div className="flex flex-col md:flex-row">
+                    <div className="flex items-center justify-center md:w-52">
+                      <Image
+                        className="flex h-10"
                         src={facilitaImg}
                         alt="Facilita Logo"
                         width="160"
@@ -46,7 +121,7 @@ export function Experiences() {
                         Facilita System
                       </p>
                       <p className="exps__date text-center md:text-start">
-                        01/2024 - Até o momento
+                        01/2024 - 07/2024
                       </p>
                     </div>
                   </div>
@@ -118,7 +193,7 @@ export function Experiences() {
                       <Image
                         className="flex h-10"
                         src={arezzoSvg}
-                        alt="Facilita Logo"
+                        alt="Arezzo Logo"
                         width="80"
                         height="20"
                       />
@@ -222,14 +297,14 @@ export function Experiences() {
                       <Image
                         className="flex h-10"
                         src={arezzoSvg}
-                        alt="Facilita Logo"
+                        alt="Arezzo Logo"
                         width="80"
                         height="20"
                       />
                       <Image
                         className="flex h-11"
                         src={growdevSvg}
-                        alt="Facilita Logo"
+                        alt="Growdev Logo"
                         width="80"
                         height="50"
                       />
