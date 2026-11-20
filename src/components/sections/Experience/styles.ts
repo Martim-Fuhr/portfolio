@@ -46,7 +46,7 @@ export const ExperienceSection = styled.section`
     }
 
     &__title {
-      color: white;
+      color: ${theme.colors.text};
       font-weight: 600;
       font-size: 22px;
       padding: 4px;
@@ -57,7 +57,7 @@ export const ExperienceSection = styled.section`
     }
 
     &__company {
-      color: white;
+      color: ${theme.colors.text};
       text-transform: uppercase;
       font-weight: 600;
       font-size: 18px;
@@ -87,7 +87,7 @@ export const ExperienceSection = styled.section`
       top: 0;
       bottom: 5%;
       transition: background-color 0.5s ease;
-      background: linear-gradient(90deg, #1e1e1e, #333, #1e1e1e);
+      background: linear-gradient(90deg, var(--surface-muted), var(--line), var(--surface-muted));
       background-size: 200% 100%;
       animation: BorderAnimation 2s linear infinite;
     }

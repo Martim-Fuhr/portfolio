@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Contact } from '@/components/Contact'
 import { Profile, TextWrapper } from './styles'
 import { useBreakpoints } from '@/hooks/use-breakpoints'
+import Link from 'next/link'
 
 export function CoverPage() {
   const { isMobile } = useBreakpoints()
@@ -38,12 +39,20 @@ export function CoverPage() {
 
   function renderDownloadButton() {
     return (
-      <button
-        onClick={handleDownload}
-        className="flex items-center w-[200px] h-[40px] my-5 mx-auto bg-blue-800 text-white rounded-3xl hover:bg-blue-600 transition-colors duration-300 justify-center"
-      >
-        Download Resume
-      </button>
+      <div className="flex items-center gap-4 my-5 flex-wrap">
+        <button
+          onClick={handleDownload}
+          className="flex items-center w-[200px] h-[40px] bg-blue-800 text-white rounded-3xl hover:bg-blue-600 transition-colors duration-300 justify-center normal-case font-medium cursor-pointer"
+        >
+          Baixar currículo
+        </button>
+        <Link
+          href="/visualizar"
+          className="text-sm normal-case underline underline-offset-4 hover:text-blue-400 transition-colors"
+        >
+          Ou ver online
+        </Link>
+      </div>
     )
   }
 
@@ -58,7 +67,7 @@ export function CoverPage() {
         <div className="flex w-full relative">
           <h2 className="h2-function text-7xl font-bold font-sans">
             Desenvolvedor <br />
-            Frontend
+            FullStack
           </h2>
           <div className="hidden md:block absolute right-0 bottom-0">
             <Contact />

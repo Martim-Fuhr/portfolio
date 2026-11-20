@@ -123,6 +123,29 @@ export const SpanName = styled.span`
   }
 `
 
+export const ThemeButton = styled.button`
+  align-items: center;
+  background: transparent;
+  border: 1px solid ${theme.colors.whiteAccordion};
+  border-radius: 999px;
+  color: ${theme.colors.whiteAccordion};
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  right: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  width: 40px;
+  z-index: 2;
+
+  &:hover {
+    background-color: ${theme.colors.whiteAccordion};
+    color: ${theme.colors.newBackgroundColorSecond};
+    transform: rotate(12deg);
+  }
+`
+
 export const SpanDesk = styled.span`
   color: ${theme.colors.whiteAccordion};
   font-family: 'IBM Plex Mono', monospace;

@@ -1,16 +1,22 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import './globals.css'
 import StyledComponentsRegistry from './../lib/registry'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import { PageWipe } from '@/components/motion/PageWipe'
 
-import dynamic from 'next/dynamic'
-
-const HeaderDynamic = dynamic(() => import('@/components/Header'), {
-  ssr: false,
-})
-
-const FooterDynamic = dynamic(() => import('@/components/Footer'), {
-  ssr: false,
-})
+const themeInit = `
+try {
+  var stored = localStorage.getItem('theme');
+  var theme = stored === 'light' || stored === 'dark'
+    ? stored
+    : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+  document.documentElement.dataset.theme = theme;
+} catch (e) {
+  document.documentElement.dataset.theme = 'dark';
+}
+`
 
 export const metadata: Metadata = {
   title: 'Martim Fuhr',
@@ -26,14 +32,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
-      <StyledComponentsRegistry>
-        <body>
-          <HeaderDynamic />
+    <html lang="pt-BR" className="scroll-smooth" suppressHydrationWarning>
+      <body>
+        <Script id="theme-init" strategy="beforeInteractive">
+          {themeInit}
+        </Script>
+        <StyledComponentsRegistry>
+          <PageWipe />
+          <Header />
           {children}
-          <FooterDynamic />
-        </body>
-      </StyledComponentsRegistry>
+          <Footer />
+        </StyledComponentsRegistry>
+      </body>
     </html>
   )
 }

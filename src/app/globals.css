@@ -2,8 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+:root,
+[data-theme='dark'] {
+  --bg: #1e1530;
+  --surface: #1e1530;
+  --surface-elevated: #1d0c3a;
+  --surface-muted: #2a2140;
+  --text: #fcfffc;
+  --heading: #f1f1f1;
+  --accent: #ffffca;
+  --shadow: #000000;
+  --line: #7373e6;
+  --wipe: #120a22;
+  color-scheme: dark;
+}
+
+[data-theme='light'] {
+  --bg: #f6f1e8;
+  --surface: #efe7da;
+  --surface-elevated: #fffdf8;
+  --surface-muted: #e7dfd2;
+  --text: #1c1430;
+  --heading: #1a1030;
+  --accent: #5c3d91;
+  --shadow: rgba(28, 20, 48, 0.18);
+  --line: #6d4bb5;
+  --wipe: #efe6ff;
+  color-scheme: light;
+}
+
 body {
-  background-color: #1e1530;
+  background-color: var(--bg);
+  color: var(--text);
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  transition: background-color 0.45s ease, color 0.45s ease;
+}
+
+.page-wipe {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, transparent 0%, var(--line) 42%, var(--wipe) 42.2%),
+    var(--bg);
+  transform: translateY(-100%);
+  transition: transform 0.55s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+html.is-wiping .page-wipe {
+  transform: translateY(0);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(36px) scale(0.985);
+  filter: blur(8px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.8s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.route-enter {
+  animation: route-in 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes route-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }

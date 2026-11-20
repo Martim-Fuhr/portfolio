@@ -18,31 +18,31 @@ export function Sidebar({ active, setActive }: SidebarProps) {
       <Container sidebar={active.toString()} onClick={closeSidebar}>
         <FaArrowLeft onClick={closeSidebar} />
         <InfoList>
-          <Link href="#home" scroll={true}>
+          <Link href="/#home" scroll={true}>
             Home
           </Link>
         </InfoList>
 
         <InfoList>
-          <Link href="#entregas" scroll={true}>
+          <Link href="/#entregas" scroll={true}>
             Principais entregas
           </Link>
         </InfoList>
 
         <InfoList>
-          <Link href="#experiencia" scroll={true}>
+          <Link href="/#experiencia" scroll={true}>
             Experiência
           </Link>
         </InfoList>
 
         <InfoList>
-          <Link href="#sobre" scroll={true}>
+          <Link href="/#sobre" scroll={true}>
             Sobre mim
           </Link>
         </InfoList>
 
         <InfoList>
-          <Link href="#habilidades" scroll={true}>
+          <Link href="/#habilidades" scroll={true}>
             Habilidades
           </Link>
         </InfoList>

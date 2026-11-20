@@ -15,11 +15,11 @@
     "autoprefixer": "^10.4.16",
     "eslint": "8.44.0",
     "eslint-config-next": "^14.0.4",
-    "next": "^14.0.4",
+    "next": "^16.1.6",
     "next-intl": "^3.3.3",
     "postcss": "^8.4.30",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-icons": "^4.11.0",
     "react-switch": "^7.0.0",
     "sass": "^1.69.5",
@@ -32,5 +32,10 @@
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "eslint-plugin-prettier": "^5.2.1"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

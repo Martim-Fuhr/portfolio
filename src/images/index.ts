@@ -5,4 +5,6 @@ export const IMAGES = {
   SMS_DASHBOARD: '/images/new-sms-dashboard.jfif',
   ACCOUNT_CONFIRMATION: '/images/Screenshot_6.png',
   AB_BIRMAN: '/images/hover-images-ab.gif',
+  KEDU_MULTI: '/images/app-kedu-multi.png',
+  MATRICULAS: '/images/matriculas.png',
 }

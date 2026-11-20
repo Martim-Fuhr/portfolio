@@ -16,6 +16,7 @@ import {
   SiStyledcomponents,
   SiGoogleoptimize,
   SiGoogletagmanager,
+  SiCsharp,
 } from 'react-icons/si'
 
 export function Skills() {
@@ -30,6 +31,7 @@ export function Skills() {
       <IconContext.Provider value={{ size: `${isMobile ? 60 : 100}` }}>
         <div className="flex flex-wrap w-full gap-5">
           <FaReact className="react" title="React JS" />
+          <SiCsharp className="csharp" title="C#"/>
           <BiLogoJavascript className="js" title="JavaScript" />
           <BiLogoTypescript className="ts" title="TypeScript" />
           <TbBrandNextjs className="next" title="Next JS" />

@@ -1,30 +1,28 @@
-import dynamic from 'next/dynamic'
-
-// const CoverPage = dynamic(() => import('@/components/sections/CoverPage'), {
-//   ssr: false,
-// })
-
-// const Carousel = dynamic(() => import('@/components/sections/Carousel'), {
-//   ssr: false,
-// })
-
-const Experiences = dynamic(() => import('@/components/sections/Experience'), {
-  ssr: false,
-})
-
-const About = dynamic(() => import('@/components/sections/About'), {
-  ssr: false,
-})
-
-const Skills = dynamic(() => import('@/components/sections/Skills'), {
-  ssr: false,
-})
-
 import { CoverPage } from '@/components/sections/CoverPage'
 import { Carousel } from '@/components/sections/Carousel'
- 
+import { Experiences } from '@/components/sections/Experience'
+import { About } from '@/components/sections/About'
+import { Skills } from '@/components/sections/Skills'
+import { Reveal } from '@/components/motion/Reveal'
+
 export default function Home() {
   return (
-    <><CoverPage /><Carousel /><Experiences /><About /><Skills /></>
+    <main>
+      <Reveal>
+        <CoverPage />
+      </Reveal>
+      <Reveal>
+        <Carousel />
+      </Reveal>
+      <Reveal>
+        <Experiences />
+      </Reveal>
+      <Reveal>
+        <About />
+      </Reveal>
+      <Reveal>
+        <Skills />
+      </Reveal>
+    </main>
   )
 }

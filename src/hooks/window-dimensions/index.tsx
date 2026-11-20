@@ -8,7 +8,7 @@ interface WindowDimensions {
 
 export function useWindowDimensions(): WindowDimensions {
   const [windowDimensions, setWindowDimensions] = useState<WindowDimensions>({
-    width: typeof window !== 'undefined' ? window.innerWidth : 0,
+    width: 0,
   })
 
   useEffect(() => {
@@ -18,6 +18,7 @@ export function useWindowDimensions(): WindowDimensions {
       })
     }
 
+    handleResize()
     window.addEventListener('resize', handleResize)
 
     return () => {

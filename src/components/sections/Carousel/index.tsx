@@ -5,10 +5,17 @@ import Image from 'next/image'
 import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { CarouselSection, H2Title } from './styles'
-import 'swiper/css'
 
 export function Carousel() {
   const dataImages = [
+    {
+      id: '0',
+      image: IMAGES.KEDU_MULTI,
+      title: 'KEDU: Criação do APP KEDU MULTI',
+      type: 'Fullstack',
+      description:
+        'Criação do APP KEDU MULTI, um app onde os Responsáveis Finaneiros podem acompanhar titulos e matrículas de seus dependentes.',
+    },
     {
       id: '1',
       image: IMAGES.VANS_HOVER,
@@ -19,6 +26,14 @@ export function Carousel() {
     },
     {
       id: '2',
+      image: IMAGES.MATRICULAS,
+      title: 'KEDU: Fatoração do módulo de Matrículas',
+      type: 'Fullstack',
+      description:
+        'Fatoração/Criação de um módulo de matrículas no painel Administrador, permitindo seguir um fluxo mais adequado de matrículas no sistema.',
+    },
+    {
+      id: '3',
       image: IMAGES.ZZMALL_ZZPAY,
       title: 'ZZMALL: Criação do MVP do ZZPAY',
       type: 'Frontend',
@@ -26,23 +41,23 @@ export function Carousel() {
         'Criação do ZZPAY, programa de cashback da Arezzo&Co. Onde uma compra no ZZMall gera saldo para ser utulizado em outras futuras compras.',
     },
     {
-      id: '3',
+      id: '4',
       image: IMAGES.SMS_DASHBOARD,
-      title: 'SMSFunnel: Apresentação de SMS enviados e Data-Picker',
+      title: 'SMSFunnel: Criação completa do Dashboard',
       type: 'Fullstack',
       description:
-        'Adição de um DATA-PICKER no site do SMSFunnel, sendo possível vizualizar todos SMS enviados no período desejado. Além de melhorias da forma de trazer as informações.',
+        'Adição de um dashboard completo no site do SMSFunnel, sendo possível vizualizar todos SMS enviados no período desejado além de outras métricas importantes.',
     },
     {
-      id: '4',
+      id: '5',
       image: IMAGES.ACCOUNT_CONFIRMATION,
       title: 'SMSFunnel: Confirmação de Conta via SMS',
       type: 'Fullstack',
       description:
-        'Adição do sistema de Confirmação de Conta via SMS. Na criação da conta no SMSFunnel, será enviado um SMS ao telefone do cliente para confirmar a criação da mesma.',
+        'Criação do sistema de Confirmação de Conta via SMS na criação da conta no SMSFunnel.',
     },
     {
-      id: '5',
+      id: '6',
       image: IMAGES.AB_BIRMAN,
       title: 'Alexandre Birman: Adição do Hover com Imagem em AB',
       type: 'Frontend',
@@ -73,7 +88,7 @@ export function Carousel() {
               spaceBetween: 48,
             },
           }}
-          className="text-white"
+          className="text-[var(--text)]"
         >
           {dataImages.map((item) => (
             <SwiperSlide key={item.id}>
@@ -89,7 +104,7 @@ export function Carousel() {
                     {item.type}
                   </span>
                 </div>
-                <p className="text-slate-300 text-sm">{item.description}</p>
+                <p className="text-sm">{item.description}</p>
               </div>
             </SwiperSlide>
           ))}

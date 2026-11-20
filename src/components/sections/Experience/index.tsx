@@ -8,7 +8,7 @@ import { SiCsharp } from 'react-icons/si'
 import { IoMdArrowDropdownCircle } from 'react-icons/io'
 import arezzoSvg from '../../../../public/icons/arezzo.svg'
 import facilitaImg from '../../../../public/images/facilita.png'
-import meirelesFreitas from '../../../../public/images/mf-logo.png'
+import logoKedu from '../../../../public/images/logo-kedu.png'
 import growdevSvg from '../../../../public/images/icon.webp'
 import Accordion from '../../../components/accordion'
 import Image from 'next/image'
@@ -34,7 +34,7 @@ export function Experiences() {
                     <div className="flex items-center justify-center md:w-52">
                       <Image
                         className="flex h-10"
-                        src={meirelesFreitas}
+                        src={logoKedu}
                         alt="MF Logo"
                         width="180"
                         height="50"
@@ -45,7 +45,7 @@ export function Experiences() {
                         Desenvolvedor FullStack Pleno
                       </p>
                       <p className="exps__company text-center md:text-start">
-                        Grupo Meireles e Freitas
+                        kedu
                       </p>
                       <p className="exps__date text-center md:text-start">
                         10/2024 - o momento
@@ -63,6 +63,11 @@ export function Experiences() {
                 </>
               }
             >
+              <li>Desenvolvimento de funcionalidades em Angular, TypeScript, React e C#/.NET para uma plataforma
+              utilizada por mais de 600 escolas privadas;</li>
+              <li>Participação no ciclo de desenvolvimento desde a prototipagem até a entrega de sistemas internos e
+              integrações com sistemas de terceiros;</li>
+              <li> Implementação de regras de negócio relacionadas a matrículas, turmas e estrutura acadêmica.</li>
               <div>
                 <p className="flex text-xl uppercase p-3 justify-center w-full text-center">
                   principais tecnologias utilizadas aqui:
@@ -92,6 +97,14 @@ export function Experiences() {
                     <p>C#</p>
                   </span>
                 </span>
+              </div>
+              <div>
+                <ul>
+                  <p className="pb-4 text-lg">Principais entregas:</p>
+                  <li>Entrega do APP KEDU MULTI;</li>
+                  <li>Fatoração completa do sistema de matrículas;</li>
+                  <li>Criação do Painel Administrativo.</li>
+                </ul>
               </div>
             </Accordion>
           </div>
@@ -136,10 +149,9 @@ export function Experiences() {
                 </>
               }
             >
-              <li>Implementação de novas funcionalidades;</li>
-              <li>Automação de testes;</li>
-              <li>Correção de Bugs;</li>
-              <li>Fatoração de códigos legados.</li>
+              <li>Automatização de 100% do fluxo de testes do SMSFunnel utilizando Cypress;</li>
+              <li>Implementação de melhorias no Call4U, sistema de comunicação por voz e chamadas telefônicas;</li>
+              <li>Melhorias de performance, SEO e refatoração de código legado.</li>
               <div>
                 <p className="flex text-xl uppercase p-3 justify-center w-full text-center">
                   principais tecnologias utilizadas aqui:
@@ -170,12 +182,11 @@ export function Experiences() {
               <div>
                 <ul>
                   <p className="pb-4 text-lg">Principais entregas:</p>
-                  <li>Validação de Conta com Token via SMS do SMSFunnel</li>
+                  <li>Validação de Conta com Token via SMS do SMSFunnel;</li>
                   <li>
-                    Implementação de Testes Automatizados com Cypress no
-                    SMSFunnel
+                    Implementação de Testes Automatizados com Cypress em 100% do SMSFunnel;
                   </li>
-                  <li>Entrega do MVP do Picnut</li>
+                  <li>Entrega do MVP do Picnut.</li>
                 </ul>
               </div>
             </Accordion>
@@ -222,15 +233,16 @@ export function Experiences() {
               }
             >
               <li>
-                Implementação de novas funcionalidades nos sites da companhia;
+                Desenvolvimento e manutenção de interfaces para os e-commerces das marcas Vans, Schutz, Fiever,
+                Alexandre Birman e Alexandre Birman Kids;
               </li>
-              <li>Criação de Landing Pages;</li>
               <li>
-                Implementação de novas ferramentas e funcionalidades no Gerador
-                de Landings Pages & Blogs da companhia;
+                Desenvolvimento de Landing Pages para Vans, Anacapri e Schutz, incluindo HTML, CSS, JavaScript e
+                configurações específicas para cada marca;</li>
+              <li>
+                Implementação de funcionalidades no Gerador de Landing Pages e Blogs utilizado pelas marcas do
+                grupo Arezzo&Co;
               </li>
-              <li>Correções de bugs;</li>
-              <li>Melhorias de SEO;</li>
               <li>
                 Gerenciamento de Testes AB e Fix’s emergenciais (Google Tag
                 Manager, Google Optimize).
@@ -269,16 +281,16 @@ export function Experiences() {
                 <ul>
                   <p className="pb-4 text-lg">Principais entregas:</p>
                   <li>
-                    Criação do Hover Com Video nas Páginas de Categorias nos
-                    sites da companhia
+                    Criação do hover com video nas páginas de categorias nos
+                    sites da companhia;
                   </li>
                   <li>
-                    Criação do Hover com Imagens nas Páginas de Categoria nos
-                    sites da companhia
+                    Desenvolvimento do hover de produtos nas vitrines das páginas principais e participação em testes A/B
+                    com Google Optimize;
                   </li>
                   <li>
                     Criação e personalização do Gerador de Blog da Companhia
-                    para sites de renome como Vans e Schutz
+                    para sites de renome como Vans e Schutz.
                   </li>
                 </ul>
               </div>
@@ -332,11 +344,17 @@ export function Experiences() {
                 </>
               }
             >
-              <li>Correções de bugs nas paginas e sites da companhia;</li>
-              <li>Criação de LP&#39;s para datas especiais</li>
+              <li>
+                Atuação no desenvolvimento do ZZMall, com foco em funcionalidades da plataforma e evolução do
+                produto;
+              </li>
+              <li>Criação de LP&#39;s para datas especiais(Natal, Páscoa, Dia das Mães, Dia dos Pais, etc.)</li>
               <li>Criação de LP&#39;s no BLOG da Companhia.</li>
               <li>Fix&#39;s emergenciais com GTM;</li>
-              <li>Fatoração de códigos legados;</li>
+              <li>
+                Desenvolvimento e manutenção de funcionalidades utilizando React, JavaScript, TypeScript e tecnologias
+                do ecossistema Node.js;
+              </li>
               <div>
                 <p className="flex text-xl uppercase p-3 justify-center w-full text-center">
                   principais tecnologias utilizadas aqui:
@@ -371,8 +389,8 @@ export function Experiences() {
                 <ul>
                   <p className="pb-4 text-lg">Principais entregas:</p>
                   <li>
-                    Criação da v1 do ZZPay, a ferramenta de cashback da
-                    Arezzo&Co
+                    Participação no desenvolvimento da primeira versão do ZZPay, solução de cashback da Arezzo&Co, que
+                    alcançou aproximadamente R$ 1 milhão em cashback no primeiro ano de lançamento;
                   </li>
                   <li>Refatoração do Menu Mobile e Web do ZZMall</li>
                 </ul>

@@ -6,8 +6,8 @@ export function Footer() {
       <div className="my-5">
         <Contact />
       </div>
-      <p id="contact" className="text-sm text-center text-white">
-        © 2024, Martim Fuhr
+      <p id="contact" className="text-sm text-center" style={{ color: 'var(--text)' }}>
+        © 2026, Martim Fuhr
       </p>
     </footer>
   )

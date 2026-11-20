@@ -87,6 +87,10 @@ export const SkillSection = styled.section`
       &.php {
         fill: #7377ad;
       }
+
+      &.csharp {
+        fill: #9714bd;
+      }
     }
   }
 `
